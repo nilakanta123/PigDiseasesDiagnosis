@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-		<div class="row">
+	<!-- 	<div class="row">
 			<div class="col-lg-12">
 				<h2>OBSERVED SYMPTOMS</h2>
 			  	<p>Please Click and choose appropriate Age group and Symptoms most similar to your diseased animals.</p>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="row">
 		  	<div class="col-lg-4">
@@ -22,30 +22,12 @@
 				     
 						<div id="age_group_list" class="panel-collapse collapse">
 				        	<div class="list-group">
+				          		{% for item in age %}
 				          		<li class="list-group-item">
-				          			<label class="item">Piglet<input type="checkbox" value="Piglet" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">A piglet is a young pig.</p>
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
 				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Weaner<input type="checkbox" value="Weaner" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">A Weaner is a pig of age between 3 to 6 months.</p>
-				          		</li>
-			          			<li class="list-group-item">
-			          				<label class="item">Grower<input type="checkbox" value="Grower" class="chk"><span class="checkmark"></span></label>
-			          				<p class="hidden">A Grower is a pig of age between 6 months to 1 year.</p>
-			          			</li>
-			      				<li class="list-group-item">
-			      					<label class="item">Finisher<input type="checkbox" value="Finisher" class="chk"><span class="checkmark"></span></label>
-			      					<p class="hidden">A Finisher is a fully grown pig.</p>
-			      				</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Sow<input type="checkbox" value="Sow" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">A Sow is a fully developed female pig used for breading.</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Boar<input type="checkbox" value="Boar" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">A Boar is a fully developed male pig.</p>
-				          		</li>
+				          		{% endfor %}
 				        	</div>
 				        	<!-- <div class="panel-footer">..</div> -->
 				      	</div>
@@ -61,50 +43,12 @@
 				     
 						<div id="general_observation_list" class="panel-collapse collapse">
 				        	<ul class="list-group">
+				          		{% for item in general%}
 				          		<li class="list-group-item">
-				          			<label class="item">Fever<input type="checkbox" value="Fever" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Fever....</p>
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
 				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Dehydration<input type="checkbox" value="Dehydration" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Dehydration...</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Dullness<input type="checkbox" value="Dullness" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Dullness....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Jaundice<input type="checkbox" value="Jaundice" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Jaundice.....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Off feed<input type="checkbox" value="Off feed" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Off feed .....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Off water<input type="checkbox" value="Off water" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Off water .....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Weakness<input type="checkbox" value="Weakness" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Weakness .....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Weight loss<input type="checkbox" value="Weight loss" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Weight loss .....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Pale eye or Anemia<input type="checkbox" value="Pale eye or Anemia" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Pale eye due to Anemia .....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Eye redness<input type="checkbox" value="Eye redness" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Redness of eye due to .....</p>
-				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Mastastis<input type="checkbox" value="Mastastis" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Mastastis .....</p>
-				          		</li>
+				          		{% endfor %}
 				        	</ul>
 				      	</div>
 				    </div>
@@ -119,14 +63,12 @@
 				     
 						<div id="skin_changes_list" class="panel-collapse collapse">
 				        	<ul class="list-group">
+				          		{% for item in skin %}
 				          		<li class="list-group-item">
-				          			<label class="item">Bluish Ear<input type="checkbox" value="Fever" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Bluish Ear....</p>
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
 				          		</li>
-				          		<li class="list-group-item">
-				          			<label class="item">Bluish Eye<input type="checkbox" value="Dehydration" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Bluish Eye...</p>
-				          		</li>
+				          		{% endfor %}
 				          		
 				        	</ul>
 				      	</div>
@@ -142,29 +84,117 @@
 				     
 						<div id="respiration_changes_list" class="panel-collapse collapse">
 				        	<ul class="list-group">
+				          		{% for item in breathing %}
 				          		<li class="list-group-item">
-				          			<label class="item">Breathing Difficulty<input type="checkbox" value="Fever" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Breathing Difficulty....</p>
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
 				          		</li>
+				          		{% endfor %}
 				          		
 				        	</ul>
 				      	</div>
 				    </div>
 
 				    <!-- Digestive changes   -->
-				    <div class="panel panel-info">
+				    <div id="id_d" class="panel panel-info">
 				      	<div class="panel-heading">
 				       		<h4 class="panel-title">
-				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#digestive_changes_list">5. Digestive changes  Changes</a>
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#digestive_changes_list">5. Digestive Problems</a>
 				        	</h4>
 				      	</div>
 				     
 						<div id="digestive_changes_list" class="panel-collapse collapse">
 				        	<ul class="list-group">
+				        		{% for item in digestive %}
 				          		<li class="list-group-item">
-				          			<label class="item">Breathing Difficulty<input type="checkbox" value="Fever" class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">Breathing Difficulty....</p>
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
 				          		</li>
+				          		{% endfor %}
+				          		
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Behavioural changes   -->
+				    <div class="panel panel-info">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#behavioural_changes_list">6. Behavioural Changes</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="behavioural_changes_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				        		{% for item in behavioural %}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
+				          		</li>
+				          		{% endfor %}
+				          		
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Posture changes   -->
+				    <div class="panel panel-info">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#posture_changes_list">7. Posture Changes</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="posture_changes_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				        		{% for item in posture %}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
+				          		</li>
+				          		{% endfor %}
+				          		
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Structure changes   -->
+				    <div class="panel panel-info">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#structure_changes_list">8. Structural Changes</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="structure_changes_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				        		{% for item in structure %}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
+				          		</li>
+				          		{% endfor %}
+				          		
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- discharge   -->
+				    <div class="panel panel-info">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#discharge_changes_list">9. Discharge Type</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="discharge_changes_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				        		{% for item in discharge %}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.1}}....</p>
+				          		</li>
+				          		{% endfor %}
 				          		
 				        	</ul>
 				      	</div>
@@ -177,7 +207,7 @@
 		  	</div>
 		  	<div class="col-lg-8">
 		  		<!-- right side panel -->
-		  		<div class="panel panel-info">
+		  		<div class="panel panel-info myfix">
 				  	<div class="panel-heading">Information</div>
 				  	<div id="information" class="panel-body">
 				  	</div>

@@ -1,0 +1,90 @@
+symptoms,description
+Piglet,Piglet
+Weaner,Weaner
+Grower,Grower
+Finisher,Finisher
+Sow,Sow
+Boar,Boar
+Fever,Fever
+Dehydration,Dehydration
+Dullness,Dullness
+Jaundice,Jaundice
+Off_feed,Off feed
+Off_water,Off water
+Weakness,Weakness
+Weight_loss,Weight loss
+Pale_eye_or_anemia,Pale eye or anemia
+Eye_redness,Eye redness 
+Mastitis,Mastitis
+Abortion,Abortion
+Bluish_ear,Bluish ear
+Bluish_eye,Bluish eye
+Bluish_mouth,Bluish mouth
+Bluish_skin,Bluish skin
+Diamond_shaped_lesions,Diamond shaped lesions
+Discoloration,Discoloration
+Flakes,Flakes
+Gangrene,Gangrene
+Greasy_skin,Greasy skin
+Hair_loss,Hair loss
+Hardened_skin,Hardened skin
+Leathery_skin,Leathery skin
+Pale_skin,Pale skin
+Pox_lesion,Pox lesion
+Redness,Redness
+Reddish_ear,Reddish ear
+Circular_patches,Circular patches
+Vesicles,Vesicles
+Itching,Itching
+Wound,Wound
+Breathing_difficulty,Breathing difficulty
+Coughing,Coughing
+Hurried_breathing,Hurried breathing
+Labored_breathing,Labored breathing
+Pneumonia,Pneumonia
+Shallow_breathing,Shallow_breathing
+Sneezing,Sneezing
+Snoring,Snoring
+Bloody_diarrhea,Bloody diarrhea
+Diarrhea,Diarrhea
+Foul_feces,Foul_feces
+Pasty_feces,Pasty_feces
+Vomiting,Vomiting
+Dark_feces,Dark_feces
+Watery_feces,Watery_feces
+Collapse,Collapse
+Convulsions,Convulsions
+Head_tilting,Head_tilting
+Hyperactivity,Hyperactivity
+Immobility,Immobility
+Jaw_immobility,Jaw immobility
+Muscle_rigidity,Muscle rigidity
+Muscle_spasms,Muscle spasms
+Painful_movement,Painful movement
+Paralysis,Paralysis
+Recumbency,Recumbency
+Staying_in_isolation,Staying in isolation
+Tremor_or_Seizures_or_Fits,Tremor or Seizures or Fits
+Elbow_turned_out,Elbow turned out
+Erect_tail,Erect tail
+Joint_pain,Joint pain
+Joint_swelling,Joint swelling
+Lameness,Lameness
+Stiffness_of_ears,Stiffness of ears
+Upright_ear,Upright ear
+Incoordiation,Incoordiation
+Wobbling,Wobbling
+Abdomen_dilatation,Abdomen dilatation
+Emaciation,Emaciation
+Swollen_face,Swollen face
+Lymph_node_enlargement,Lymph node enlargement
+Snout_deviation,Snout deviation
+Wrinkled_snout,Wrinkled snout
+Discharge_from_eye,Discharge from eye
+Discharge_from_nose,Discharge from nose
+Nose_bleeding,Nose bleeding
+Blood_in_urine,Blood in urine
+Vaginal_discharge,Vaginal discharge
+Testicle_swelling,Testicle swelling
+Swollen_udder,Swollen udder
+Painful_swellings,Painful swellings
