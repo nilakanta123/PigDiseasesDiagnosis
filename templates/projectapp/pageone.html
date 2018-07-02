@@ -8,9 +8,23 @@
 		</div> -->
 
 		<div class="row">
-		  	<div class="col-lg-4">
-		  		
-			  	<!-- accodion with selectable list -->
+		  	
+		  	<div class="col-sm-12 col-md-6 col-lg-8 pull-right">
+		  		<h2>OBSERVED SYMPTOMS</h2>
+			  	<p>Please Click and choose appropriate Age group and Symptoms most similar to your diseased animals.</p>
+		  		<!-- right side panel -->
+		  		<div class="panel panel-info">
+				  	<div class="panel-heading">Information</div>
+				  	<div id="information" class="panel-body">
+				  	</div>
+				</div>
+
+				<button type="button" id="buttonClass" class="btn btn-primary">Submit</button>
+
+		  	</div>
+
+		  	<div class="col-sm-12 col-md-6 col-lg-4 scrollable-col">
+		  		<!-- accodion with selectable list -->
 			  	<div class="panel-group" id="accordion">
 			  		<!-- age group -->
 				    <div class="panel panel-info">
@@ -24,8 +38,8 @@
 				        	<div class="list-group">
 				          		{% for item in age %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				        	</div>
@@ -45,8 +59,8 @@
 				        	<ul class="list-group">
 				          		{% for item in general%}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				        	</ul>
@@ -65,8 +79,8 @@
 				        	<ul class="list-group">
 				          		{% for item in skin %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -86,8 +100,8 @@
 				        	<ul class="list-group">
 				          		{% for item in breathing %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -107,8 +121,8 @@
 				        	<ul class="list-group">
 				        		{% for item in digestive %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -128,8 +142,8 @@
 				        	<ul class="list-group">
 				        		{% for item in behavioural %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -149,8 +163,8 @@
 				        	<ul class="list-group">
 				        		{% for item in posture %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -170,8 +184,8 @@
 				        	<ul class="list-group">
 				        		{% for item in structure %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -191,8 +205,8 @@
 				        	<ul class="list-group">
 				        		{% for item in discharge %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.0}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
-				          			<p class="hidden">{{item.1}}....</p>
+				          			<label class="item">{{item.1}}<input type="checkbox" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
 				          		
@@ -200,26 +214,13 @@
 				      	</div>
 				    </div>
 
-				    
-
 			  	</div>
 			  	<!-- end accodion with selectable list -->
+		  		
 		  	</div>
-		  	<div class="col-lg-8">
-		  		<!-- right side panel -->
-		  		<div class="panel panel-info myfix">
-				  	<div class="panel-heading">Information</div>
-				  	<div id="information" class="panel-body">
-				  	</div>
-				</div>
-		  	</div>
+
+
+
 		</div>
-		<div class="row">
-		  	<div class="col-lg-4"></div>
-		  	<div class="col-lg-4"></div>
-		  	<div class="col-lg-4">
-		  		<button type="button" id="buttonClass" class="btn btn-primary">Submit</button>
-    			<!-- <input type="button" value="Get Value Using Parent Tag" id="buttonParent"> -->
-		  	</div>
-		</div>
+		
 {% endblock content %}
