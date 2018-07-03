@@ -8,6 +8,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style type="text/css">
 	/* The container */
+	body{
+	  overflow: hidden;
+	}
 	.item {
 	    display: block;
 	    position: relative;
@@ -97,8 +100,12 @@
 	    display: none; 
 	}*/
 	::-webkit-scrollbar { 
-	    display: none; 
+	    /*display: none;*/
+	    width: 0px;  /* remove scrollbar space */
+    	background: transparent; 
 	}
+
+
 
 </style>
 <script type="text/javascript">

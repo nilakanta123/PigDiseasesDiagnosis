@@ -1,10 +1,9 @@
 import numpy as np
 import pandas as pd
 
-def get_symptom_list():
+def get_separated_symptom_list():
 	res = {}
 	s_list = pd.read_csv("data/info.csv")
-	# res['age'] =s_list[0:6]
 	res['age']=[tuple(x) for x in s_list[0:6].values]
 	res['general']=[tuple(x) for x in s_list[6:18].values]
 	res['skin']=[tuple(x) for x in s_list[18:38].values]
@@ -13,5 +12,12 @@ def get_symptom_list():
 	res['behavioural']=[tuple(x) for x in s_list[53:66].values]
 	res['posture']=[tuple(x) for x in s_list[66:75].values]
 	res['structure']=[tuple(x) for x in s_list[75:81].values]
-	res['discharge']=[tuple(x) for x in s_list[81:].values]	
+	res['discharge']=[tuple(x) for x in s_list[81:].values]
 	return res
+
+def get_symptom_list():
+	s_list = pd.read_csv("data/info.csv")
+	return(list(s_list['symptoms']))
+
+
+# get_separated_symptom_list()
