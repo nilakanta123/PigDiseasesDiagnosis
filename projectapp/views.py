@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import PageOneForm
-from .utility import get_separated_symptom_list, get_symptom_list
+from .utility import get_separated_symptom_list, get_user_input, predict_engine
 
 def page_one(request):
 	# if this is a POST request we need to process the form data
@@ -10,10 +10,10 @@ def page_one(request):
 		 # check whether it's valid:
 		if form.is_valid():
 			 # process the data in form.cleaned_data as required
-			print(request.POST.getlist('checks'))
-			print("and")
-			print(get_symptom_list())
-			print("\nWORKING TILL HERE\n")
+			
+			user_input = get_user_input(request.POST.getlist('checks'))
+			if len(request.POST.getlist('checks')) > 0:
+				print(predict_engine(user_input))
 			 # redirect to a new URL:
 			return render(request, 'pagetwo.html',{})
 	 # if a GET (or any other method) we'll create a blank form

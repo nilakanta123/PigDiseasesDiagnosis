@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+from sklearn import preprocessing
+from sklearn.utils import shuffle
+from sklearn.svm import SVC
 
 def get_separated_symptom_list():
 	res = {}
@@ -15,9 +18,25 @@ def get_separated_symptom_list():
 	res['discharge']=[tuple(x) for x in s_list[81:].values]
 	return res
 
-def get_symptom_list():
+def get_user_input(ll):
 	s_list = pd.read_csv("data/info.csv")
-	return(list(s_list['symptoms']))
+	res = []
+	for i in s_list['symptoms']:
+		if i in ll:
+			res.append(1)
+		else:
+			res.append(0)
+	return res
 
+def predict_engine(ll):
+	df = pd.read_csv('data/am.csv')
+	df.drop(['Probable_agent'], axis=1, inplace=True)	
+	labelEncoder = preprocessing.LabelEncoder()
+	if df['Probable_disease'].size > 0:
+		labelEncoder.fit(df['Probable_disease'])
+	df['Probable_disease']=labelEncoder.transform(df['Probable_disease'])
+	X, y = shuffle(df.iloc[:,:-1],df.Probable_disease, random_state=13)
+	model_svm = SVC(C=26, gamma=0.01, kernel='rbf')
+	model_svm.fit(X,y)
+	return labelEncoder.inverse_transform(model_svm.predict([ll]))
 
-# get_separated_symptom_list()
