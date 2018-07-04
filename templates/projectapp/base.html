@@ -8,9 +8,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style type="text/css">
 	/* The container */
-	body{
-	  overflow: hidden;
-	}
 	.item {
 	    display: block;
 	    position: relative;
@@ -85,9 +82,6 @@
 	    content: "\e114";
 	}
 	.hidden { font-size: 0; }
-	/*.fixed-col {
-  		height: 85vh;
-	}*/
 
 	.scrollable-col {
   		height: 85vh;
@@ -100,9 +94,7 @@
 	    display: none; 
 	}*/
 	::-webkit-scrollbar { 
-	    /*display: none;*/
-	    width: 0px;  /* remove scrollbar space */
-    	background: transparent; 
+	    display: none;
 	}
 
 
@@ -124,7 +116,7 @@
 		    getValueUsingClass();
 		});
 
-		// // // Scroll list to position current heading
+		// Scroll list to position current heading
 		// $('#accordion').on('shown.bs.collapse', function (e) {
   //           var offset = $(this).find('.collapse.in').prev('.panel-heading');
   //           if(offset) {
