@@ -30,12 +30,12 @@ def get_user_input(ll):
 
 def predict_engine(ll):
 	df = pd.read_csv('data/am.csv')
-	df.drop(['Probable_agent'], axis=1, inplace=True)	
+	# df.drop(['Probable_agent'], axis=1, inplace=True)	
 	labelEncoder = preprocessing.LabelEncoder()
 	if df['Probable_disease'].size > 0:
 		labelEncoder.fit(df['Probable_disease'])
 	df['Probable_disease']=labelEncoder.transform(df['Probable_disease'])
-	X, y = shuffle(df.iloc[:,:-1],df.Probable_disease, random_state=13)
+	X, y = shuffle(df.iloc[:,:-2],df.Probable_disease, random_state=13)
 	model_svm = SVC(C=26, gamma=0.01, kernel='rbf')
 	model_svm.fit(X,y)
 	return labelEncoder.inverse_transform(model_svm.predict([ll]))

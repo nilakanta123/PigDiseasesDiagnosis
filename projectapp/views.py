@@ -13,9 +13,8 @@ def page_one(request):
 			
 			user_input = get_user_input(request.POST.getlist('checks'))
 			if len(request.POST.getlist('checks')) > 0:
-				print(predict_engine(user_input))
-			 # redirect to a new URL:
-			return render(request, 'pagetwo.html',{})
+				
+				return render(request, 'pagetwo.html',{'finding': predict_engine(user_input)})
 	 # if a GET (or any other method) we'll create a blank form
 	else:
 		form = PageOneForm()
