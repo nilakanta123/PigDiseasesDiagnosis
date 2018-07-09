@@ -36,7 +36,8 @@ def predict_engine(ll):
 		labelEncoder.fit(df['Probable_disease'])
 	df['Probable_disease']=labelEncoder.transform(df['Probable_disease'])
 	X, y = shuffle(df.iloc[:,:-2],df.Probable_disease, random_state=13)
-	model_svm = SVC(C=26, gamma=0.01, kernel='rbf')
+	model_svm = SVC(C=26, gamma=0.01, kernel='rbf', probability=True)
 	model_svm.fit(X,y)
-	return labelEncoder.inverse_transform(model_svm.predict([ll]))
+	pred = (-model_svm.predict_proba([ll])).argsort()[0]
+	return labelEncoder.inverse_transform(pred[:3])
 

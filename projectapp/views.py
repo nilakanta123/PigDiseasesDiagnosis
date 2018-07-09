@@ -12,6 +12,7 @@ def page_one(request):
 			 # process the data in form.cleaned_data as required
 			
 			user_input = get_user_input(request.POST.getlist('checks'))
+			print(user_input)
 			if len(request.POST.getlist('checks')) > 0:
 				
 				return render(request, 'pagetwo.html',{'finding': predict_engine(user_input)})
