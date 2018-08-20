@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<form method="POST" >
+    {% csrf_token %}
+
+		<div class="row">
+			
+		  	<div class="col-sm-12 col-md-6 col-lg-8 pull-right">
+		  		<h2>Finding in Animal Postmortem</h2>
+			  	<p>Please Click and choose appropriate.</p>
+		  		<!-- right side panel -->
+		  		<div class="panel panel-primary">
+				  	<div class="panel-heading">Information</div>
+				  	<div id="information" class="panel-body">
+				  	</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+		  	</div>
+
+		  	<div class="col-sm-12 col-md-6 col-lg-4 scrollable-col">
+		  		<!-- accodion with selectable list -->
+			  	<div class="panel-group" id="accordion">
+			  		<!-- age group -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#age_group_list">1. Age Group</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="age_group_list" class="panel-collapse collapse">
+				        	<div class="list-group">
+				          		{% for item in age %}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</div>
+				        	<!-- <div class="panel-footer">..</div> -->
+				      	</div>
+				    </div>
+
+				    <!-- general observation -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#general_observation_list">2. General Observation</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="general_observation_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in general%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				   
+				    <!-- discharge   -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#discharge_changes_list">9. Discharge Type</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="discharge_changes_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				        		{% for item in discharge %}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				          		
+				        	</ul>
+				      	</div>
+				    </div>
+			  	</div>
+			  	<!-- end accodion with selectable list -->
+		  		
+		  	</div>
+
+		</div>
+
+	</form>
+		
+{% endblock content %}

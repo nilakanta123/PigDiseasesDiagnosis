@@ -6,7 +6,7 @@ from sklearn.svm import SVC
 
 def get_separated_symptom_list():
 	res = {}
-	s_list = pd.read_csv("data/info.csv")
+	s_list = pd.read_csv("data/am_info.csv")
 	res['age']=[tuple(x) for x in s_list[0:6].values]
 	res['general']=[tuple(x) for x in s_list[6:18].values]
 	res['skin']=[tuple(x) for x in s_list[18:38].values]
@@ -19,7 +19,7 @@ def get_separated_symptom_list():
 	return res
 
 def get_user_input(ll):
-	s_list = pd.read_csv("data/info.csv")
+	s_list = pd.read_csv("data/am_info.csv")
 	res = []
 	for i in s_list['symptoms']:
 		if i in ll:

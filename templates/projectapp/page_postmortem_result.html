@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="row">
+			
+		  	<div class="col-sm-12 col-md-8 col-lg-9 pull-right">
+		  		<!-- right side panel -->
+		  		<div class="panel panel-primary">
+				  	<div class="panel-heading">Result</div>
+				  	<div class="panel-body">
+				  		<p>The following are the findings according to your given information about your animals.</p>
+				  		<p>1.{{finding.0}}</p>
+				  		<p>2.{{finding.1}}</p>
+				  		<p>3.{{finding.2}}</p>
+				  		<p> According to our prediction your animals, most probably, may be infected with {{finding.0}}. So our suggestion is to {{decision}}.</p> 
+				  	</div>
+				</div>
+			</div>
+
+		  	<div class="col-sm-12 col-md-4 col-lg-3">
+				<div class="list-group">
+				  <a class="list-group-item active"><h4>Summary</h4></a>
+				  <a href="#" class="list-group-item active">Result</a>
+				  <a href="#" class="list-group-item active">More Details</a>
+				  <a href="#" class="list-group-item active">Extra Informations</a>
+				  <a href="#" class="list-group-item active">Contact</a>
+				</div>
+		  	</div>
+	</div>
+{% endblock content %}
