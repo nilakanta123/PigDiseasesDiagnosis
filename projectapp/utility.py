@@ -4,7 +4,7 @@ from sklearn import preprocessing
 from sklearn.utils import shuffle
 from sklearn.svm import SVC
 
-def get_separated_symptom_list():
+def get_am_symptom_list():
 	res = {}
 	s_list = pd.read_csv("data/am_info.csv")
 	res['age']=[tuple(x) for x in s_list[0:6].values]
@@ -18,7 +18,39 @@ def get_separated_symptom_list():
 	res['discharge']=[tuple(x) for x in s_list[81:89].values]
 	return res
 
-def get_user_input(ll):
+def get_pm_symptom_list():
+	res = {}
+	s_list = pd.read_csv("data/pm_info.csv")
+	res['sex']=[tuple(x) for x in s_list[0:2].values]
+	res['head']=[tuple(x) for x in s_list[2:13].values]
+	res['skin']=[tuple(x) for x in s_list[13:17].values]
+	res['muscle']=[tuple(x) for x in s_list[17:20].values]
+	res['pleura']=[tuple(x) for x in s_list[20:27].values]
+	res['lymphnode']=[tuple(x) for x in s_list[27:32].values]
+	res['udder']=[tuple(x) for x in s_list[32:33].values]
+	res['lung']=[tuple(x) for x in s_list[33:49].values]
+	res['heart']=[tuple(x) for x in s_list[49:57].values]
+	res['epligotis']=[tuple(x) for x in s_list[57:58].values]
+	res['stomach']=[tuple(x) for x in s_list[58:62].values]
+	res['intestine']=[tuple(x) for x in s_list[62:73].values]
+	res['liver']=[tuple(x) for x in s_list[73:82].values]
+	res['spleen']=[tuple(x) for x in s_list[82:88].values]
+	res['gallbladder']=[tuple(x) for x in s_list[88:90].values]
+	res['bileduct']=[tuple(x) for x in s_list[90:93].values]
+	res['pancreaticduct']=[tuple(x) for x in s_list[93:96].values]
+	res['kidney']=[tuple(x) for x in s_list[96:105].values]
+	res['urinarybladder']=[tuple(x) for x in s_list[105:107].values]
+	res['uterus']=[tuple(x) for x in s_list[107:110].values]
+	res['testicles']=[tuple(x) for x in s_list[110:115].values]
+	res['joinbone']=[tuple(x) for x in s_list[115:121].values]
+	res['abdominalcavity']=[tuple(x) for x in s_list[121:126].values]
+	res['thorasiccavity']=[tuple(x) for x in s_list[126:130].values]
+	res['specialcondition']=[tuple(x) for x in s_list[130:131].values]
+	res['pmimethodvisual']=[tuple(x) for x in s_list[131:132].values]
+	res['condition']=[tuple(x) for x in s_list[132:134].values]
+	return res
+
+def get_am_input(ll):
 	s_list = pd.read_csv("data/am_info.csv")
 	res = []
 	for i in s_list['symptoms']:
@@ -28,7 +60,17 @@ def get_user_input(ll):
 			res.append(0)
 	return res
 
-def diseases_predict_engine(ll):
+def get_pm_input(ll):
+	s_list = pd.read_csv("data/pm_info.csv")
+	res = []
+	for i in s_list['symptoms']:
+		if i in ll:
+			res.append(1)
+		else:
+			res.append(0)
+	return res
+
+def am_diseases_predict_engine(ll):
 	df = pd.read_csv('data/am.csv')
 	# df.drop(['Probable_agent'], axis=1, inplace=True)	
 	labelEncoder = preprocessing.LabelEncoder()
@@ -42,7 +84,7 @@ def diseases_predict_engine(ll):
 	return labelEncoder.inverse_transform(pred[:3])
 
 
-def decision_predict_engine(ll,st):
+def am_decision_predict_engine(ll,st):
 	df = pd.read_csv('data/am.csv')
 	# df.drop(['Probable_agent'], axis=1, inplace=True)	
 	pdle = preprocessing.LabelEncoder()
@@ -64,6 +106,41 @@ def decision_predict_engine(ll,st):
 	ll.extend(ss)
 	pred = model2_svm.predict([ll])[0]
 	return dle.inverse_transform(pred)
+
+def pm_decision_predict_engine(ll,st):
+	df = pd.read_csv('data/pm.csv')
+	df.drop(['Probable_agent','Approve','Partial','Total'], axis=1, inplace=True)
+	dcle = preprocessing.LabelEncoder()
+	pdle = preprocessing.LabelEncoder()
+	if df['Probable_disease'].size > 0:
+		pdle.fit(df['Probable_disease'])
+	if df['Decision'].size > 0:
+		dcle.fit(df['Decision'])
+	df['Probable_disease']=pdle.transform(df['Probable_disease'])
+	df['Decision']=dcle.transform(df['Decision'])
+	X, y = shuffle(df.iloc[:,:-1],df.Decision, random_state=13)
+	model_svm_for_pm = SVC(C=0.1, gamma=0.01, kernel='linear')
+	model_svm_for_pm.fit(X,y)
+	ss = pdle.transform([st])
+	ll.extend(ss)
+	pred = model_svm_for_pm.predict([ll])[0]
+	return dcle.inverse_transform(pred)
+
+def pm_diseases_predict_engine(ll):
+	df = pd.read_csv('data/pm.csv')
+	df.drop(['Probable_agent','Approve','Partial','Total','Decision'], axis=1, inplace=True)
+	labelEncoder = preprocessing.LabelEncoder()
+	if df['Probable_disease'].size > 0:
+		labelEncoder.fit(df['Probable_disease'])
+	df['Probable_disease']=labelEncoder.transform(df['Probable_disease'])
+	X, y = shuffle(df.iloc[:,:-1],df.Probable_disease, random_state=13)
+	model_svm = SVC(C=10, gamma=0.1, kernel='sigmoid', probability=True)
+	model_svm.fit(X,y)
+	pred = (-model_svm.predict_proba([ll])).argsort()[0]
+	return labelEncoder.inverse_transform(pred[:3])
+
+
+
 
 # l = [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
 # s = 'Screwworm flies infestation or Myiasis'

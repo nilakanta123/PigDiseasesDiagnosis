@@ -1,0 +1,135 @@
+symptoms,label,description
+Male,Male ,NA
+Female,Female,NA
+Cyst_in_tounge_or_muscle,Cyst in tounge or muscle,NA
+Brain_cyst,Brain cyst,NA
+Snout_necrosis,Snout necrosis,NA
+Turbinate_atropy  ,Turbinate atropy  ,NA
+Tongue_vesicles,Tongue vesicles,NA
+Tonsil _necrosis,Tonsil  necrosis,NA
+Brain_haemorrhages,Brain haemorrhages,NA
+Meningitis,Meningitis,NA
+Encephalitis,Encephalitis,NA
+Hydrocephalus,Hydrocephalus,NA
+Cerebellar_hypoplasia,Cerebellar hypoplasia,NA
+Alopecia,Alopecia,NA
+Diamond_shaped_lesions,Diamond shaped lesions,NA
+Skin_Haemorrhages,Skin Haemorrhages,NA
+Pus_or_abscess_or_pyaemia_in_skin,Pus or abscess or pyaemia in skin,NA
+Muscle_Cyst,Muscle Cyst,NA
+Myositis,Myositis,NA
+Muscle_Necrosis,Muscle Necrosis,NA
+Fibrin_deposition_on_pleura,Fibrin deposition on pleura,NA
+Pleura_thickening,Pleura thickening,NA
+Pleural_abscess_or_Purulent_exudate,Pleural abscess or Purulent exudate,NA
+Pleural_adhesions,Pleural adhesions,NA
+Pleural_effusions,Pleural effusions,NA
+Pleuritis_or_Pleurisy,Pleuritis or Pleurisy,NA
+Pleura_Tubercles,Pleura Tubercles,NA
+Lymphnodes_Abscess,Lymphnodes Abscess,NA
+Lymphnodes_Congestion,Lymphnodes Congestion,NA
+Lymphnodes_Enlargement,Lymphnodes Enlargement,NA
+Hyperplasia,Hyperplasia,NA
+Lymphnodes_Oedema,Lymphnodes Oedema,NA
+Mastitis,Mastitis,NA
+Abscess_or_Milky spot_on_lung,Abscess or Milky spot on lung,NA
+Bronchi_or_with_thick_exudate,Bronchi or with thick exudate,NA
+Bronchiolitis,Bronchiolitis,NA
+Bronchopneumonia,Bronchopneumonia,NA
+Lung_Cyst,Lung Cyst,NA
+Collapse,Collapse,NA
+Lung_Congestion,Lung Congestion,NA
+Consolidation_or_Hepatisation,Consolidation or Hepatisation,NA
+Emphysema,Emphysema,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_lung,Haemorrhages or Petechiae or Echymosis in lung,NA
+Embolic_or_lesions,Embolic or lesions,NA
+Mottling,Mottling,NA
+Lung_Necrosis,Lung Necrosis,NA
+Lung_Oedema,Lung Oedema,NA
+Pneumonia,Pneumonia,NA
+Lung_Tubercles,Lung Tubercles,NA
+Heart_Cyst,Heart Cyst,NA
+Endocarditis,Endocarditis,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_heart,Haemorrhages or Petechiae or Echymosis in heart,NA
+Myocarditis,Myocarditis,NA
+Heart_Necrosis,Heart Necrosis,NA
+Pericarditis,Pericarditis,NA
+Percardial_adhesions_or_Fibrin_deposits,Percardial adhesions or Fibrin deposits,NA
+Purulent_pericarditis,Purulent pericarditis,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Epiglotis,Haemorrhages or Petechiae or Echymosis in Epiglotis,NA
+Bloat,Bloat,NA
+Gastritis,Gastritis,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_stomach,Haemorrhages or Petechiae or Echymosis in stomach,NA
+Ulceration,Ulceration,NA
+Button_Ulcers_or_Ulcers,Button Ulcers or Ulcers,NA
+Intestine_Abscess,Intestine Abscess,NA
+Enteritis,Enteritis,NA
+Erosions,Erosions,NA
+Gas,Gas,NA
+Intestine_Granuloma,Intestine Granuloma,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Intestine,Haemorrhages or Petechiae or Echymosis in Intestine,NA
+Intestine_Necrosis,Intestine Necrosis,NA
+Intestine_Oedema,Intestine Oedema,NA
+Intestine_Obstruction ,Intestine Obstruction ,NA
+Sluffling_Intestine,Sluffling Intestine,NA
+Liver_Abscess,Liver Abscess,NA
+Liver_Cyst,Liver Cyst,NA
+Liver_Degeneration,Liver Degeneration,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Liver,Haemorrhages or Petechiae or Echymosis in Liver,NA
+Hepatitis,Hepatitis,NA
+Embolic_lesions_in_Liver,Embolic lesions in Liver,NA
+Hepatomegaly,Hepatomegaly,NA
+Liver_Necrosis,Liver Necrosis,NA
+Liver_Tubercles,Liver Tubercles,NA
+Spleen_Abscess,Spleen Abscess,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Spleen,Haemorrhages or Petechiae or Echymosis in Spleen,NA
+Embolic_lesions_in_Spleen,Embolic lesions in Spleen,NA
+Spleen_Necrosis,Spleen Necrosis,NA
+Spleenomegaly_or_Enlargement_in_Spleen,Spleenomegaly or Enlargement in Spleen,NA
+Spleen_Tubercles,Spleen Tubercles,NA
+Gall_bladder_Haemorrhages,Gall bladder Haemorrhages,NA
+Gall_bladder_Infections,Gall bladder Infections,NA
+Obstruction_in_Bile_duct,Obstruction in Bile duct,NA
+Bile_duct_Infections,Bile duct Infections,NA
+Bile_duct_Enlargement,Bile duct Enlargement,NA
+Pancreatic_duct_Enlargement,Pancreatic duct Enlargement,NA
+Pancreatic_duct_Infections,Pancreatic duct Infections,NA
+Occlussions ,Occlussions ,NA
+Abscess_or_White_spot_on_Kidney,Abscess or White spot on Kidney,NA
+Kidney_Degeneration,Kidney Degeneration,NA
+Kidney_Enlargement,Kidney Enlargement,NA
+Granular_deposition,Granular deposition,NA
+Embolic_lesions_in_Kidney,Embolic lesions in Kidney,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Kidney,Haemorrhages or Petechiae or Echymosis in Kidney,NA
+Kidney_Oedema,Kidney Oedema,NA
+Kidney_Necrosis,Kidney Necrosis,NA
+Nephritis,Nephritis,NA
+Cystitis,Cystitis,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Urinary_bladder,Haemorrhages or Petechiae or Echymosis in Urinary bladder,NA
+Metritis_or_Endometritis,Metritis or Endometritis,NA
+Nodule_or_Miliary_nodules,Nodule or Miliary nodules,NA
+Pyometra,Pyometra,NA
+Testicles_Abscess,Testicles Abscess,NA
+Epididymtitis,Epididymtitis,NA
+Testicles_Granuloma,Testicles Granuloma,NA
+Haemorrhages_or_Petechiae_or_Echymosis_in_Testicles,Haemorrhages or Petechiae or Echymosis in Testicles,NA
+Orchitis,Orchitis,NA
+Joint_or_Bone_Abscess,Joint or Bone Abscess,NA
+Osteomyelitis,Osteomyelitis,NA
+Arthritis_or_Polyarthritis,Arthritis or Polyarthritis,NA
+Tenosynovitis,Tenosynovitis,NA
+Suppuration_of_intervertebral_disc,Suppuration of intervertebral disc,NA
+Synovitis,Synovitis,NA
+Serosanguineous_fluid_in_Abdominal_cavity,Serosanguineous fluid in Abdominal cavity,NA
+Ascitis,Ascitis,NA
+Serosous_membrane_Cyst,Serosous membrane Cyst,NA
+Polyserositis,Polyserositis,NA
+Peritonitis,Peritonitis,NA
+Hydrothorax,Hydrothorax,NA
+Serosanguineous_fluid_in_Thorasic_cavity,Serosanguineous fluid in Thorasic cavity,NA
+Brochial_Oedema,Brochial Oedema,NA
+Frothy_fluid,Frothy fluid,NA
+Jaundice,Jaundice,NA
+PMI_Method_Visual,PMI Method Visual,NA
+Generalized,Generalized,NA
+Localized,Localized,NA

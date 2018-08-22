@@ -21,17 +21,17 @@
 		  	<div class="col-sm-12 col-md-6 col-lg-4 scrollable-col">
 		  		<!-- accodion with selectable list -->
 			  	<div class="panel-group" id="accordion">
-			  		<!-- age group -->
+			  		<!-- sex group -->
 				    <div class="panel panel-primary">
 				      	<div class="panel-heading">
 				       		<h4 class="panel-title">
-				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#age_group_list">1. Age Group</a>
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#sex_group_list">1. Sex Group</a>
 				        	</h4>
 				      	</div>
 				     
-						<div id="age_group_list" class="panel-collapse collapse">
+						<div id="sex_group_list" class="panel-collapse collapse">
 				        	<div class="list-group">
-				          		{% for item in age %}
+				          		{% for item in sex %}
 				          		<li class="list-group-item">
 				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
 				          			<p class="hidden">{{item.2}}</p>
@@ -42,17 +42,17 @@
 				      	</div>
 				    </div>
 
-				    <!-- general observation -->
+				    <!-- Head related problems -->
 				    <div class="panel panel-primary">
 				      	<div class="panel-heading">
 				       		<h4 class="panel-title">
-				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#general_observation_list">2. General Observation</a>
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#head_list">2. Head related problems</a>
 				        	</h4>
 				      	</div>
 				     
-						<div id="general_observation_list" class="panel-collapse collapse">
+						<div id="head_list" class="panel-collapse collapse">
 				        	<ul class="list-group">
-				          		{% for item in general%}
+				          		{% for item in head%}
 				          		<li class="list-group-item">
 				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
 				          			<p class="hidden">{{item.2}}</p>
@@ -62,27 +62,509 @@
 				      	</div>
 				    </div>
 
-				   
-				    <!-- discharge   -->
+					<!-- Skin related problems -->
 				    <div class="panel panel-primary">
 				      	<div class="panel-heading">
 				       		<h4 class="panel-title">
-				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#discharge_changes_list">9. Discharge Type</a>
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#skin_list">3. Skin related problems</a>
 				        	</h4>
 				      	</div>
 				     
-						<div id="discharge_changes_list" class="panel-collapse collapse">
+						<div id="skin_list" class="panel-collapse collapse">
 				        	<ul class="list-group">
-				        		{% for item in discharge %}
+				          		{% for item in skin%}
 				          		<li class="list-group-item">
 				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
 				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
-				          		
 				        	</ul>
 				      	</div>
 				    </div>
+
+				    <!-- Muscle related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#muscle_list">4. Muscle related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="muscle_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in muscle%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+					<!-- Pleura problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pleura_list">5. Pleura problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="pleura_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in pleura%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Lymphnode related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#lymphnode_list">6. Lymphnode related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="lymphnode_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in lymphnode%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Udder related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#udder_list">7. Udder problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="udder_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in udder%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Lung related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#lung_list">8. Lung related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="lung_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in lung%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Heart related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#heart_list">9. Heart related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="heart_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in heart%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Epligotis related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#epligotis_list">10. Epligotis related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="epligotis_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in epligotis%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Stomach related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#stomach_list">11. Stomach related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="stomach_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in stomach%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Intestine related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#intestine_list">12. Intestine related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="intestine_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in intestine%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Liver related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#liver_list">13. Liver related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="liver_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in liver%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Spleen related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#spleen_list">14. Spleen related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="spleen_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in spleen%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Gall Bladder related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#gallbladder_list">15. Gall Bladder related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="gallbladder_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in gallbladder%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Bileduct related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#bileduct_list">16. Bile Duct related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="bileduct_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in bileduct%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Pancreatic duct related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pancreaticduct_list">17. Pancreatic Duct related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="pancreaticduct_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in pancreaticduct%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Kidney related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#kidney_list">18. Kidney related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="kidney_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in kidney%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Urinary Bladder related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#urinarybladder_list">19. Urinary Bladder problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="urinarybladder_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in urinarybladder%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Uterus related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#uterus_list">20. Uterus related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="uterus_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in uterus%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				     <!-- Testicles related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#testicles_list">21. Testicles related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="testicles_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in testicles%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Joint or Bone related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#joinbone_list">22. Joint and Bone related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="joinbone_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in joinbone%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Abdominal Cavity related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#abdominalcavity_list">23. Abdominal Cavity related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="abdominalcavity_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in abdominalcavity%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Thorasic Cavity related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#thorasiccavity_list">24. Thorasic Cavity related problems</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="thorasiccavity_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in thorasiccavity%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Special Condition related problems -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#specialcondition_list">25. Special Condition</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="specialcondition_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in specialcondition%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- PMI Method Visual -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#pmimethod_list">26. PMI Method Visual</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="pmimethod_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in pmimethodvisual%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+				    <!-- Scope of infection -->
+				    <div class="panel panel-primary">
+				      	<div class="panel-heading">
+				       		<h4 class="panel-title">
+				          		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#condition_list">27. Scope of Infection</a>
+				        	</h4>
+				      	</div>
+				     
+						<div id="condition_list" class="panel-collapse collapse">
+				        	<ul class="list-group">
+				          		{% for item in condition%}
+				          		<li class="list-group-item">
+				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<p class="hidden">{{item.2}}</p>
+				          		</li>
+				          		{% endfor %}
+				        	</ul>
+				      	</div>
+				    </div>
+
+
+
+
 			  	</div>
 			  	<!-- end accodion with selectable list -->
 		  		
