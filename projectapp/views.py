@@ -3,23 +3,17 @@ from .forms import PageOneForm, PageTwoForm
 from .utility import get_am_symptom_list,  get_pm_symptom_list, get_am_input, get_pm_input, am_diseases_predict_engine, am_decision_predict_engine, pm_diseases_predict_engine, pm_decision_predict_engine
 
 def page_am(request):
-	# if this is a POST request we need to process the form data
 	if request.method == 'POST':
-		# create a form instance and populate it with data from the request:
 		form = PageOneForm(request.POST)
-		 # check whether it's valid:
 		if form.is_valid():
-			 # process the data in form.cleaned_data as required
 			checked_list = request.POST.getlist('checks')
 			if len(checked_list) > 0:
 				user_input = get_am_input(checked_list)
-				diseases = am_diseases_predict_engine(user_input)
+				diseases, scores = am_diseases_predict_engine(user_input)
 				decision = am_decision_predict_engine(user_input, diseases[0])
-				return render(request, 'page_antimortem_result.html',{'finding': diseases, 'decision': decision})
-	 # if a GET (or any other method) we'll create a blank form
+				return render(request, 'page_antimortem_result.html',{'finding': diseases, 'range1': range(int(scores[0])), 'range2': range(int(scores[1])), 'range3': range(int(scores[2])), 'decision': decision})
 	else:
 		form = PageOneForm()
-
 	dic = get_am_symptom_list()
 	return render(request, 'page_antimortem.html', {"age":dic['age'],"general":dic['general'],"skin":dic['skin'],
 				"breathing":dic['breathing'],"digestive":dic['digestive'],"behavioural":dic['behavioural'],

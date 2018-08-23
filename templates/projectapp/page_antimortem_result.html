@@ -8,10 +8,42 @@
 				  	<div class="panel-heading">Result</div>
 				  	<div class="panel-body">
 				  		<p>The following are the findings according to your given information about your animals.</p>
-				  		<p>1.{{finding.0}}</p>
-				  		<p>2.{{finding.1}}</p>
-				  		<p>3.{{finding.2}}</p>
-				  		<p> According to our prediction your animals, most probably, may be infected with {{finding.0}}. So our suggestion is to {{decision}}.</p> 
+				  		<table cellpadding="10" width="100%">
+				  			<tr>
+							    <th width="40%">Diseases</th>
+							    <th width="20%">Score</th> 
+							    <th width="30%"></th>
+							</tr>
+							<tr>
+						  		<td>{{finding.0}}</td>
+						  		<td>
+						  			{% for i in range1 %}
+						  				<span class="fa fa-star checked"></span>
+						  			{% endfor %}
+						  		</td>
+						  		<td>{{range1}}</td>
+						  	</tr>
+						  	<tr>
+						  		<td>{{finding.1}}</td>
+						  		<td>
+						  			{% for i in range2 %}
+						  				<span class="fa fa-star checked"></span>
+						  			{% endfor %}
+						  		</td>
+						  		<td>{{range2}}</td>
+						  	</tr>
+						  	<tr>
+						  		<td>{{finding.2}}</td>
+						  		<td>
+						  			{% for i in range3 %}
+						  				<span class="fa fa-star checked"></span>
+						  			{% endfor %}
+						  		</td>
+						  		<td>{{range3}}</td>
+						  	</tr>
+						</table>
+				  		<p> According to our prediction, the most likely disease is {{finding.0}}.</p>
+				  		<p> And the decision you can take is to {{decision}}.</p> 
 				  	</div>
 				</div>
 

@@ -80,8 +80,18 @@ def am_diseases_predict_engine(ll):
 	X, y = shuffle(df.iloc[:,:-3],df.Probable_disease, random_state=13)
 	model_svm = SVC(C=26, gamma=0.01, kernel='rbf', probability=True)
 	model_svm.fit(X,y)
+	prob_list = model_svm.predict_proba([ll])
+	mx = max(prob_list[0])
+	mn = min(prob_list[0])
+	for index, value in enumerate(prob_list[0]):
+		x= (value-mn)*9
+		y=(x/(mx-mn))+1
+		prob_list[0][index]=y
+	score_list = sorted(prob_list[0], reverse=True)
+	score_list = np.round(score_list)
 	pred = (-model_svm.predict_proba([ll])).argsort()[0]
-	return labelEncoder.inverse_transform(pred[:3])
+	return labelEncoder.inverse_transform(pred[:3]), score_list[:3]
+
 
 
 def am_decision_predict_engine(ll,st):
