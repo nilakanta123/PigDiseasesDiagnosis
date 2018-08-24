@@ -18,28 +18,40 @@
 						  		<td>{{finding.0}}</td>
 						  		<td>
 						  			{% for i in range1 %}
-						  				<span class="fa fa-star checked"></span>
+						  				{% ifequal i 1 %}
+						  					<span class="fa fa-star checked"></span>
+						  				{% else %}
+						  					<span class="fa fa-star"></span>
+						  				{% endifequal %}
 						  			{% endfor %}
 						  		</td>
-						  		<td>{{range1}}</td>
+						  		<td>{{score1}}</td>
 						  	</tr>
 						  	<tr>
 						  		<td>{{finding.1}}</td>
 						  		<td>
 						  			{% for i in range2 %}
-						  				<span class="fa fa-star checked"></span>
+						  				{% ifequal i 1 %}
+						  					<span class="fa fa-star checked"></span>
+						  				{% else %}
+						  					<span class="fa fa-star"></span>
+						  				{% endifequal %}
 						  			{% endfor %}
 						  		</td>
-						  		<td>{{range2}}</td>
+						  		<td>{{score2}}</td>
 						  	</tr>
 						  	<tr>
 						  		<td>{{finding.2}}</td>
 						  		<td>
 						  			{% for i in range3 %}
-						  				<span class="fa fa-star checked"></span>
+						  				{% ifequal i 1 %}
+						  					<span class="fa fa-star checked"></span>
+						  				{% else %}
+						  					<span class="fa fa-star"></span>
+						  				{% endifequal %}
 						  			{% endfor %}
 						  		</td>
-						  		<td>{{range3}}</td>
+						  		<td>{{score3}}</td>
 						  	</tr>
 						</table>
 				  		<p> According to our prediction, the most likely disease is {{finding.0}}.</p>

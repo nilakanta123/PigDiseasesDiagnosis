@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import PageOneForm, PageTwoForm
-from .utility import get_am_symptom_list,  get_pm_symptom_list, get_am_input, get_pm_input, am_diseases_predict_engine, am_decision_predict_engine, pm_diseases_predict_engine, pm_decision_predict_engine
+from .utility import get_am_symptom_list,  get_pm_symptom_list, get_am_input, get_pm_input, am_diseases_predict_engine, am_decision_predict_engine, pm_diseases_predict_engine, pm_decision_predict_engine, mrange
 
 def page_am(request):
 	if request.method == 'POST':
@@ -10,14 +10,20 @@ def page_am(request):
 			if len(checked_list) > 0:
 				user_input = get_am_input(checked_list)
 				diseases, scores = am_diseases_predict_engine(user_input)
+				print(scores[0], scores[1], scores[2])
 				decision = am_decision_predict_engine(user_input, diseases[0])
-				return render(request, 'page_antimortem_result.html',{'finding': diseases, 'range1': range(int(scores[0])), 'range2': range(int(scores[1])), 'range3': range(int(scores[2])), 'decision': decision})
+				return render(request, 'page_antimortem_result.html',{'finding': diseases,
+					'score1': int(scores[0]), 'range1': mrange(int(scores[0])),
+					'score2': int(scores[1]), 'range2': mrange(int(scores[1])),
+					'score3': int(scores[2]), 'range3': mrange(int(scores[2])),
+					'decision': decision})
 	else:
 		form = PageOneForm()
 	dic = get_am_symptom_list()
 	return render(request, 'page_antimortem.html', {"age":dic['age'],"general":dic['general'],"skin":dic['skin'],
 				"breathing":dic['breathing'],"digestive":dic['digestive'],"behavioural":dic['behavioural'],
 				"posture":dic['posture'],"structure":dic['structure'],"discharge":dic['discharge'],})
+
 
 def page_pm(request):
 	# if this is a POST request we need to process the form data

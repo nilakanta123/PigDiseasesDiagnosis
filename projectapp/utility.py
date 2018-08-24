@@ -4,6 +4,29 @@ from sklearn import preprocessing
 from sklearn.utils import shuffle
 from sklearn.svm import SVC
 
+def adjusting(sc):
+	d = sc[0]-sc[1]
+	if d < 5:
+		dd = sc[1]-5
+		sc[0] = sc[0]-dd
+		sc[1] = sc[1]-dd
+		sc[2] = sc[2]-dd
+
+	if sc[2] < 0:
+		sc[0] = sc[0]+ -(sc[2])
+		sc[1] = sc[1]+ -(sc[2])
+		sc[2] = sc[2]+ -(sc[2])
+
+	return sc
+
+def mrange(n):
+	l = []
+	for i in range(n):
+		l.append(1)
+	for j in range(10-n):
+		l.append(0)
+	return l
+
 def get_am_symptom_list():
 	res = {}
 	s_list = pd.read_csv("data/am_info.csv")
@@ -60,6 +83,8 @@ def get_am_input(ll):
 			res.append(0)
 	return res
 
+
+
 def get_pm_input(ll):
 	s_list = pd.read_csv("data/pm_info.csv")
 	res = []
@@ -90,7 +115,7 @@ def am_diseases_predict_engine(ll):
 	score_list = sorted(prob_list[0], reverse=True)
 	score_list = np.round(score_list)
 	pred = (-model_svm.predict_proba([ll])).argsort()[0]
-	return labelEncoder.inverse_transform(pred[:3]), score_list[:3]
+	return labelEncoder.inverse_transform(pred[:3]), adjusting(score_list[:3])
 
 
 
