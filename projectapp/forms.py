@@ -16,3 +16,7 @@ class PageOneForm(forms.Form):
 class PageTwoForm(forms.Form):
 	def __init__(self, *args, **kwargs):
 		super(PageTwoForm, self).__init__(*args, **kwargs)
+
+class FeedbackForm(forms.Form):
+	def __init__(self, *args, **kwargs):
+		super(FeedbackForm, self).__init__(*args, **kwargs)

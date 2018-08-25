@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+<form method="POST" >
+{% csrf_token %}
 	<div class="row">
 			
 		  	<div class="col-sm-12 col-md-8 col-lg-9 pull-right">
@@ -15,7 +17,7 @@
 							    <th width="30%"></th>
 							</tr>
 							<tr>
-						  		<td>{{finding.0}}</td>
+						  		<td>{{disease1}}</td>
 						  		<td>
 						  			{% for i in range1 %}
 						  				{% ifequal i 1 %}
@@ -28,7 +30,7 @@
 						  		<td>{{score1}}</td>
 						  	</tr>
 						  	<tr>
-						  		<td>{{finding.1}}</td>
+						  		<td>{{disease2}}</td>
 						  		<td>
 						  			{% for i in range2 %}
 						  				{% ifequal i 1 %}
@@ -41,7 +43,7 @@
 						  		<td>{{score2}}</td>
 						  	</tr>
 						  	<tr>
-						  		<td>{{finding.2}}</td>
+						  		<td>{{disease3}}</td>
 						  		<td>
 						  			{% for i in range3 %}
 						  				{% ifequal i 1 %}
@@ -54,7 +56,7 @@
 						  		<td>{{score3}}</td>
 						  	</tr>
 						</table>
-				  		<p> According to our prediction, the most likely disease is {{finding.0}}.</p>
+				  		<p> According to our prediction, the most likely disease is {{disease1}}.</p>
 				  		<p> And the decision you can take is to {{decision}}.</p> 
 				  	</div>
 				</div>
@@ -66,30 +68,50 @@
 				  		<table width="100%">
 						  <tr>
 						    <th width="40%"></th>
-						    <th width="12%">Exact same</th> 
-						    <th width="12%">Same Category of Diseases</th>
-						    <th width="12%">Totaly Different Disease</th>
-						    <th width="12%"></th>
-						    <th width="12%"></th>
+						    <th width="60%"></th> 
+						   
 						  </tr>
 						  <tr>
-						    <td  width="40%">How similar is the disease to the disease suggested by your veterinarian?</td>
-						    <td width="12%"> <input type="radio" name="similarity" value="Exact same" checked></td>
-						    <td width="12%"> <input type="radio" name="similarity" value="Same category"></td>
-						    <td width="12%"> <input type="radio" name="similarity" value="Totaly different "></td>
-						 
+						    <td>Pig Farm Address</td>
+						    <td> <input type="text" name="address"></td>	 
 						  </tr>
 						  <tr>
-						    <td width="40%">If different disease, please provide the disease.</td>
-						    <td colspan="3"> <input type="text" name="disease_name"></td>
+						    <td>Farm Telephone No.</td>
+						    <td> <input type="text" name="phone"></td>
 						  </tr>
+						  <tr>
+						    <td>Email Address</td>
+						    <td> <input type="email" name="phone"></td>
+						  </tr>
+						  <tr>
+						    <td>Animal No.</td>
+						    <td> <input type="text" name="animal_no"></td>
+						  </tr>
+						  <tr>
+						    <td>Date of sikness</td>
+						    <td> <input type="date" name="date"></td>
+						  </tr>
+						  <tr>
+						    <td>Disease Symptoms</td>
+						    <td> <input type="text" name="symptoms"></td>
+						  </tr>
+						  <tr>
+						    <td>DSS Score of diseases</td>
+						    <td> <input type="text" name="score"></td>
+						  </tr>
+						  <tr>
+						    <td>Disease diagnosed by Veterinarian</td>
+						    <td> <input type="text" name="animal_no"></td>
+						  </tr>
+						  
+						</table>
+						<table>
 						  <tr>
 						    <th width="40%"></th>
 						    <th width="12%"">Very Good</th> 
 						    <th width="12%">Good</th>
 						    <th width="12%">Fair</th>
 						    <th width="12%">Poor</th>
-						    <th width="12%">Very Poor</th>
 						  </tr>
 						  <tr>
 						    <td width="40%">How satisfied are you with our Pig Disease Prediction System?</td>
@@ -97,12 +119,12 @@
 						    <td width="12%"> <input type="radio" name="satisfaction" value="good"></td>
 						    <td width="12%"> <input type="radio" name="satisfaction" value="fair"></td>
 						    <td width="12%"> <input type="radio" name="satisfaction" value="poor"></td>
-						    <td width="12%"> <input type="radio" name="satisfaction" value="very poor"></td> 
 						  </tr>
 						</table>
 						<p>Feel free to add any other comments or suggestions:</p>
 						<textarea cols="2" rows="5" name="comment"></textarea>
-						<p>* The information given within the Feedback Form will be used for service improvement only and are strictly confidential.</p>  
+						<p>* The information given within the Feedback Form will be used for service improvement only and are strictly confidential.</p>
+						<button type="submit" class="btn btn-primary">Submit</button> 
 				  	</div>
 				</div>
 			</div>
@@ -117,4 +139,5 @@
 				</div>
 		  	</div>
 	</div>
+</form>
 {% endblock content %}
