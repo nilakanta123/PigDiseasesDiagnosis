@@ -117,6 +117,28 @@ def am_diseases_predict_engine(ll):
 	pred = (-model_svm.predict_proba([ll])).argsort()[0]
 	return labelEncoder.inverse_transform(pred[:3]), adjusting(score_list[:3])
 
+def pm_diseases_predict_engine(ll):
+	df = pd.read_csv('data/pm.csv')
+	df.drop(['Probable_agent','Approve','Partial','Total','Decision'], axis=1, inplace=True)
+	labelEncoder = preprocessing.LabelEncoder()
+	if df['Probable_disease'].size > 0:
+		labelEncoder.fit(df['Probable_disease'])
+	df['Probable_disease']=labelEncoder.transform(df['Probable_disease'])
+	X, y = shuffle(df.iloc[:,:-1],df.Probable_disease, random_state=13)
+	model_svm = SVC(C=10, gamma=0.1, kernel='sigmoid', probability=True)
+	model_svm.fit(X,y)
+	prob_list = model_svm.predict_proba([ll])
+	mx = max(prob_list[0])
+	mn = min(prob_list[0])
+	for index, value in enumerate(prob_list[0]):
+		x= (value-mn)*9
+		y=(x/(mx-mn))+1
+		prob_list[0][index]=y
+	score_list = sorted(prob_list[0], reverse=True)
+	score_list = np.round(score_list)
+	pred = (-model_svm.predict_proba([ll])).argsort()[0]
+	return labelEncoder.inverse_transform(pred[:3]), adjusting(score_list[:3])
+
 
 
 def am_decision_predict_engine(ll,st):
@@ -161,23 +183,3 @@ def pm_decision_predict_engine(ll,st):
 	pred = model_svm_for_pm.predict([ll])[0]
 	return dcle.inverse_transform(pred)
 
-def pm_diseases_predict_engine(ll):
-	df = pd.read_csv('data/pm.csv')
-	df.drop(['Probable_agent','Approve','Partial','Total','Decision'], axis=1, inplace=True)
-	labelEncoder = preprocessing.LabelEncoder()
-	if df['Probable_disease'].size > 0:
-		labelEncoder.fit(df['Probable_disease'])
-	df['Probable_disease']=labelEncoder.transform(df['Probable_disease'])
-	X, y = shuffle(df.iloc[:,:-1],df.Probable_disease, random_state=13)
-	model_svm = SVC(C=10, gamma=0.1, kernel='sigmoid', probability=True)
-	model_svm.fit(X,y)
-	pred = (-model_svm.predict_proba([ll])).argsort()[0]
-	return labelEncoder.inverse_transform(pred[:3])
-
-
-
-
-# l = [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
-# s = 'Screwworm flies infestation or Myiasis'
-# ree = decision_predict_engine(l,s)
-# print(ree)

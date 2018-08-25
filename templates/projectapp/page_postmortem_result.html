@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+<form method="POST" >
+{% csrf_token %}
 	<div class="row">
 			
 		  	<div class="col-sm-12 col-md-8 col-lg-9 pull-right">
@@ -8,10 +10,121 @@
 				  	<div class="panel-heading">Result</div>
 				  	<div class="panel-body">
 				  		<p>The following are the findings according to your given information about your animals.</p>
-				  		<p>1.{{finding.0}}</p>
-				  		<p>2.{{finding.1}}</p>
-				  		<p>3.{{finding.2}}</p>
-				  		<p> According to our prediction your animals, most probably, may be infected with {{finding.0}}. So our suggestion is to {{decision}}.</p> 
+				  		<table cellpadding="10" width="100%">
+				  			<tr>
+							    <th width="40%">Diseases</th>
+							    <th width="20%">Score</th> 
+							    <th width="30%"></th>
+							</tr>
+							<tr>
+						  		<td>{{disease1}}</td>
+						  		<td>
+						  			{% for i in range1 %}
+						  				{% ifequal i 1 %}
+						  					<span class="fa fa-star checked"></span>
+						  				{% else %}
+						  					<span class="fa fa-star"></span>
+						  				{% endifequal %}
+						  			{% endfor %}
+						  		</td>
+						  		<td>{{score1}}</td>
+						  	</tr>
+						  	<tr>
+						  		<td>{{disease2}}</td>
+						  		<td>
+						  			{% for i in range2 %}
+						  				{% ifequal i 1 %}
+						  					<span class="fa fa-star checked"></span>
+						  				{% else %}
+						  					<span class="fa fa-star"></span>
+						  				{% endifequal %}
+						  			{% endfor %}
+						  		</td>
+						  		<td>{{score2}}</td>
+						  	</tr>
+						  	<tr>
+						  		<td>{{disease3}}</td>
+						  		<td>
+						  			{% for i in range3 %}
+						  				{% ifequal i 1 %}
+						  					<span class="fa fa-star checked"></span>
+						  				{% else %}
+						  					<span class="fa fa-star"></span>
+						  				{% endifequal %}
+						  			{% endfor %}
+						  		</td>
+						  		<td>{{score3}}</td>
+						  	</tr>
+						</table>
+				  		<p> According to our prediction, the most likely disease is {{disease1}}.</p>
+				  		<p> And the decision you can take is to {{decision}}.</p> 
+				  	</div>
+				</div>
+
+				<div class="panel panel-primary">
+				  	<div class="panel-heading">Feedback</div>
+				  	<div class="panel-body">
+				  		<p>Please take a few minutes to give us feedback about our service by selecting the following choice. We are collecting this information in order to improve our Disease support System engine, to improve the level of satisfaction with the quality of our service. We thank you for your participation.</p>
+				  		<table width="100%">
+						  <tr>
+						    <th width="40%"></th>
+						    <th width="60%"></th> 
+						   
+						  </tr>
+						  <tr>
+						    <td>Pig Farm Address</td>
+						    <td> <input type="text" name="address"></td>	 
+						  </tr>
+						  <tr>
+						    <td>Farm Telephone No.</td>
+						    <td> <input type="text" name="phone"></td>
+						  </tr>
+						  <tr>
+						    <td>Email Address</td>
+						    <td> <input type="email" name="phone"></td>
+						  </tr>
+						  <tr>
+						    <td>Animal No.</td>
+						    <td> <input type="text" name="animal_no"></td>
+						  </tr>
+						  <tr>
+						    <td>Date of sikness</td>
+						    <td> <input type="date" name="date"></td>
+						  </tr>
+						  <tr>
+						    <td>Disease Symptoms</td>
+						    <td> <input type="text" name="symptoms"></td>
+						  </tr>
+						  <tr>
+						    <td>DSS Score of diseases</td>
+						    <td> <input type="text" name="score"></td>
+						  </tr>
+						  <tr>
+						    <td>Disease diagnosed by Veterinarian</td>
+						    <td> <input type="text" name="animal_no"></td>
+						  </tr>
+						  
+						</table>
+						<table>
+						  <tr>
+						    <th width="40%"></th>
+						    <th width="12%"">Very Good</th> 
+						    <th width="12%">Good</th>
+						    <th width="12%">Fair</th>
+						    <th width="12%">Poor</th>
+						  </tr>
+						  <tr>
+						    <td width="40%">How satisfied are you with our Pig Disease Prediction System?</td>
+						    <td> <input type='radio' name="satisfaction" value="very good" checked></td>
+						    <td> <input type="radio" name="satisfaction" value="good"></td>
+						    <td> <input type="radio" name="satisfaction" value="fair"></td>
+						    <td> <input type="radio" name="satisfaction" value="poor"></td>
+						  </tr>
+						</table>
+						<p>Feel free to add any other comments or suggestions:</p>
+						<textarea cols="2" rows="5" name="comment"></textarea>
+						<p>* The information given within the Feedback Form will be used for service improvement only and are strictly confidential.</p>
+						<button type="submit" class="btn btn-primary">Submit</button> 
 				  	</div>
 				</div>
 			</div>
@@ -26,4 +139,5 @@
 				</div>
 		  	</div>
 	</div>
+</form>
 {% endblock content %}
