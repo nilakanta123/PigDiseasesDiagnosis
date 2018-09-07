@@ -9,82 +9,82 @@ Fever,Fever,Fever means a high body temperature of 39-40?C (103-109?F). It may o
 Dehydration,Dehydration,"Excessive loss of body water. It occurs when free water loss exceeds free water intake, usually due to disease, or high environmental temperature."
 Dullness,Dullness,Lack of activeness in the animals.
 Jaundice,Jaundice,"Jaundice is a yellowing of the skin and mucous membranes due to the breakdown of red cells in the blood, the accumulation of the bye-products in the liver and the production of a substance called bilirubin. The condition may be seen at any age but is usually confined to individual animals or litter mates."
-Off_feed,Off feed,NA
-Off_water,Off water,NA
-Weakness,Weakness,NA
-Weight_loss,Weight loss,NA
-Pale_eye_or_anemia,Pale eye or Anemia,NA
-Eye_redness,Eye redness ,NA
-Mastitis,Mastitis,NA
-Abortion,Abortion,NA
-Bluish_ear,Bluish ear,NA
-Bluish_eye,Bluish eye,NA
-Bluish_mouth,Bluish mouth,NA
-Bluish_skin,Bluish skin,NA
-Diamond_shaped_lesions,Diamond shaped lesions,NA
-Discoloration,Discoloration,NA
-Flakes,Flakes,NA
-Gangrene,Gangrene,NA
-Greasy_skin,Greasy skin,NA
-Hair_loss,Hair loss,NA
-Hardened_skin,Hardened skin,NA
-Leathery_skin,Leathery skin,NA
-Pale_skin,Pale skin,NA
-Pox_lesion,Pox lesion,NA
-Redness,Redness,NA
-Reddish_ear,Reddish ear,NA
-Circular_patches,Circular patches,NA
-Vesicles,Vesicles,NA
-Itching,Itching,NA
-Wound,Wound,NA
-Breathing_difficulty,Breathing difficulty,NA
-Coughing,Coughing,NA
-Hurried_breathing,Hurried breathing,NA
-Labored_breathing,Labored breathing,NA
-Pneumonia,Pneumonia,NA
-Shallow_breathing,Shallow breathing,NA
-Sneezing,Sneezing,NA
-Snoring,Snoring,NA
-Bloody_diarrhea,Bloody diarrhea,NA
-Diarrhea,Diarrhea,NA
-Foul_feces,Foul feces,NA
-Pasty_feces,Pasty feces,NA
-Vomiting,Vomiting,NA
-Dark_feces,Dark feces,NA
-Watery_feces,Watery feces,NA
-Collapse,Collapse,NA
-Convulsions,Convulsions,NA
-Head_tilting,Head tilting,NA
-Hyperactivity,Hyperactivity,NA
-Immobility,Immobility,NA
-Jaw_immobility,Jaw immobility,NA
-Muscle_rigidity,Muscle rigidity,NA
-Muscle_spasms,Muscle spasms,NA
-Painful_movement,Painful movement,NA
-Paralysis,Paralysis,NA
-Recumbency,Recumbency,NA
-Staying_in_isolation,Staying in isolation,NA
-Tremor_or_Seizures_or_Fits,Tremor or Seizures or Fits,NA
-Elbow_turned_out,Elbow turned out,NA
-Erect_tail,Erect tail,NA
-Joint_pain,Joint pain,NA
-Joint_swelling,Joint swelling,NA
-Lameness,Lameness,NA
-Stiffness_of_ears,Stiffness of ears,NA
-Upright_ear,Upright ear,NA
-Incoordiation,Incoordiation,NA
-Wobbling,Wobbling,NA
-Abdomen_dilatation,Abdomen dilatation,NA
-Emaciation,Emaciation,NA
-Swollen_face,Swollen face,NA
-Lymph_node_enlargement,Lymph node enlargement,NA
-Snout_deviation,Snout deviation,NA
-Wrinkled_snout,Wrinkled snout,NA
-Discharge_from_eye,Discharge from eye,NA
-Discharge_from_nose,Discharge from nose,NA
-Nose_bleeding,Nose bleeding,NA
-Blood_in_urine,Blood in urine,NA
-Vaginal_discharge,Vaginal discharge,NA
-Testicle_swelling,Testicle swelling,NA
-Swollen_udder,Swollen udder,NA
-Painful_swellings,Painful swellings,NA
+Off_feed,Off feed,The animal's food intake is less than normal.
+Off_water,Off water,The animal's water intake is less than normal.
+Weakness,Weakness,The animal look physicaly weak.
+Weight_loss,Weight loss,"Reduction of total body mass of the animal, due to loss of fluid, body fat or adipose tissue."
+Pale_eye_or_anemia,Pale eye or Anemia,Pale color in eye due to Anemia. Anemia is a condition in which your body doesn't produce enough red blood cells. It's one of the most common causes of paleness. 
+Eye_redness,Eye redness,"Bloodshot eyes appearing red caused by allergy, eye fatigue or some other condition."
+Mastitis,Mastitis,Mastitis is an inflammation of the mammary gland caused by bacteria. that enter the udder through the teat end. Mastitis is nearly always caused by bacteria that invade the udder through the teat end and multiply there. Mastitis can be either clinical or sub-clinical.
+Abortion,Abortion,"Abortion means the premature expulsion of dead or non-viable foetuses. Embryo loss occurs when there is death of embryos followed by absorption, or expulsion. Healthy embryos grow into foetuses."
+Bluish_ear,Bluish ear,A bluish color to the skin in ear due to a lack of oxygen in the blood.
+Bluish_eye,Bluish eye,"A bluish coloration of the whites of the eyes. The blue color is caused by thinness and transparency of the collagen fibers of the sclera, allowing the veins in the underlying tissue to show through."
+Bluish_mouth,Bluish mouth,A bluish discoloration mouth due to excessive concentration of deoxyhemoglobin in the blood caused by deoxygenation.
+Bluish_skin,Bluish skin,A bluish color to the skin is usually due to a lack of oxygen in the blood.
+Diamond_shaped_lesions,Diamond shaped lesions,A skin lesions that vary from in the shape of rectangle or diamond shape often-described as diamond skin lesions.
+Discoloration,Discoloration,Discoloration of any part of animal body.
+Flakes,Flakes,Dry skin in animals.
+Gangrene,Gangrene,Gangrene refers to dead or dying body tissue(s) that occur because of inadequate blood supply.
+Greasy_skin,Greasy skin,An Oily skin characterised by an increased amount of lipids on the skin surface.
+Hair_loss,Hair loss,Hair loss from animal body.
+Hardened_skin,Hardened skin,"A chronic hardening and contraction of the skin and connective tissue, either locally or throughout the animal body."
+Leathery_skin,Leathery skin,The texture of animal's  skin is tough and hard like leather. 
+Pale_skin,Pale skin,"Paleness of skin also known as pale skin, is an unusual lightness of skin color compared with normal skin."
+Pox_lesion,Pox lesion,Visible leison on animal skin due to pox.
+Redness,Redness,Reddening of the skin due to an increase in blood flow under skin or other cases.
+Reddish_ear,Reddish ear,Reddening of the skin in the ear.
+Circular_patches,Circular patches,A round or circular shape leison or patch on animal skin.
+Vesicles,Vesicles,"A small fluid-filled bladder, sac, cyst, or vacuole within the body."
+Itching,Itching,Animals scratching skin.
+Wound,Wound,Skin infecion or wound.
+Breathing_difficulty,Breathing difficulty,Difficulty in breathing
+Coughing,Coughing,Coughing or wheezing.
+Hurried_breathing,Hurried breathing,Rapid breathing.
+Labored_breathing,Labored breathing,"Labored respiration or labored breathing is an abnormal respiration characterized by evidence of increased effort to breathe, including the use of accessory muscles of respiration, stridor, grunting, or nasal flaring."
+Pneumonia,Pneumonia,"Pneumonia is a lung disease characterized by inflammation of the airspaces in the lungs, most commonly due to an infection."
+Shallow_breathing,Shallow breathing,"Shallow breathing, or chest breathing is the drawing of minimal breath into the lungs, usually by drawing air into the chest area using the intercostal muscles rather than throughout the lungs via the diaphragm."
+Sneezing,Sneezing,Making a sudden involuntary expulsion of air from the nose and mouth due to irritation of one's nostrils.
+Snoring,Snoring,Snoring is noisy breathing during animals sleep.
+Bloody_diarrhea,Bloody diarrhea,Blood in the stool or diarrhea.
+Diarrhea,Diarrhea,A condition in which faeces are discharged from the bowels frequently and in a liquid form.
+Foul_feces,Foul feces,"Foul-smelling stools having unusually strong, putrid smell."
+Pasty_feces,Pasty feces,Pasty or sticky stools
+Vomiting,Vomiting,Vomiting
+Dark_feces,Dark feces,Dark colored stool or feces.
+Watery_feces,Watery feces,Loose or watery stools
+Collapse,Collapse,Frequent sudden falling of animals or weak animals.
+Convulsions,Convulsions,Indoluntary shakes of animal's body rapidly and uncontrollably.
+Head_tilting,Head tilting,Twisted or abnormal position of animal's head or heck.
+Hyperactivity,Hyperactivity,Constantly active and sometimes disruptive behaviour of the animal.
+Immobility,Immobility,Animal inability to move or motionlessness.
+Jaw_immobility,Jaw immobility,Jaw locking or unable to move jaw.
+Muscle_rigidity,Muscle rigidity,"Inability of the muscles to relax normally caused by muscle tension, rigor, or stiffness."
+Muscle_spasms,Muscle spasms,Muscle spasm is an involuntary contraction of a muscle that can cause a great deal of pain.
+Painful_movement,Painful movement,Visible pain in movement.
+Paralysis,Paralysis,"The loss of the ability to move (and sometimes to feel anything) in part or most of the body,"
+Recumbency,Recumbency,"The state of leaning, resting, or reclining : repose; also : a recumbent position."
+Staying_in_isolation,Staying in isolation,Staying in isolation
+Tremor_or_Seizures_or_Fits,Tremor or Seizures or Fits,"Unintentional, rhythmic muscle movement involving to-and-fro movements (oscillations) of one or more parts of the body."
+Elbow_turned_out,Elbow turned out,Elbow turned out or elbow bent out.
+Erect_tail,Erect tail,Erect tail
+Joint_pain,Joint pain,Pain in Joint or bond.
+Joint_swelling,Joint swelling,"Swelling, redness, or warmth around the joint"
+Lameness,Lameness,Lameness is an abnormal gait or stance of an animal that is the result of dysfunction of the locomotor system.
+Stiffness_of_ears,Stiffness of ears,Rigidity in animal ear muscle.
+Upright_ear,Upright ear,Vertical or upright position of ear.
+Incoordiation,Incoordiation,"Lack of coordination, especially the inability to use different parts of the body together smoothly and efficiently."
+Wobbling,Wobbling,Movement of animal body unsteadily from side to side.
+Abdomen_dilatation,Abdomen dilatation,Abdomen dilatation
+Emaciation,Emaciation,Abnormal thinness caused by lack of nutrition or by disease.
+Swollen_face,Swollen face,Swollen face
+Lymph_node_enlargement,Lymph node enlargement,Enlargement of lymph nodes.
+Snout_deviation,Snout deviation,Disfigure in projecting nose and mouth of an animal.
+Wrinkled_snout,Wrinkled snout,Wrinkled in projecting nose and mouth of an animal.
+Discharge_from_eye,Discharge from eye,Eye discharge associated with viral pink eye typically is clear and watery.
+Discharge_from_nose,Discharge from nose,Liquid or watery discharge from animal nose.
+Nose_bleeding,Nose bleeding,Blood discharge from animal nose.
+Blood_in_urine,Blood in urine,Blood in urine
+Vaginal_discharge,Vaginal discharge,Vaginal discharge
+Testicle_swelling,Testicle swelling,Swelling of animal Testicle.
+Swollen_udder,Swollen udder,Swollen in animal  mammary gland.
+Painful_swellings,Painful swellings,Painful swellings

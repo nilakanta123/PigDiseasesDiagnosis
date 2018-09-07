@@ -1,0 +1,71 @@
+Disease,Pathogen_type,Degree_of_public_health_risk
+Campylobacter spp.,Bacteria,High
+Clostridium perfringens,Bacteria,High
+Listeria monocytogenes,Bacteria,High
+Salmonella  Spp.,Bacteria,High
+Staphylococcus aureus,Bacteria,High
+Yersinia enterocolitica,Bacteria,High
+Clostridium tetani,Bacteria,High
+Bacillus anthracis,Bacteria,High
+Leptospira spp,Bacteria,High
+Cysticercus cellulosae (Taenia solium),Parasite,High
+Toxoplasma gondii,Parasite,High
+Trichinella spiralis,Parasite,High
+Actinobacillus spp.,Bacteria,Moderate
+Aeromomas hydrophila,Bacteria,Moderate
+Escherichia coli,Bacteria,Moderate
+Shigella spp.,Bacteria,Moderate
+Mycobacterium tuberculosis,Bacteria,Moderate
+Brucella spp.,Bacteria,Moderate
+Erysipelothrix rhusiopathae,Bacteria,Moderate
+Echinococcus granulosus,Parasite,Moderate
+Sarcocystis spp.,Parasite,Moderate
+Macracanthorhynchus hirudinaceus,Parasite,Moderate
+Bordetella bronchoseptica,Bacteria,Low
+Klebsiella pneumonia,Bacteria,Low
+Streptococci spp.,Bacteria,Low
+Ascaris spp.,Parasite,Low
+Cryptosporidium spp.,Parasite,Low
+Balantidium coli,Parasite,Low
+Entamoeba  spp,Parasite,Low
+Giardia Spp.,Parasite,Low
+Pasteurella multocida,Bacteria,Least
+Staphylococcus hyicus,Bacteria,Least
+Trueperella pyogenes,Bacteria,Least
+Clostridium difficile,Bacteria,Least
+Cysticercus tenuicollis (Taenia hydatigena),Parasite,Least
+Ascarops spp.,Parasite,Least
+Bourgelatta dzducta,Parasite,Least
+Globocephalus spp.,Parasite,Least
+Gnathostoma spp.,Parasite,Least
+Hyostrongylus rubidus,Parasite,Least
+Metastrongylus apri,Parasite,Least
+Oesophagostomum dentatum,Parasite,Least
+Strongyloides ransomi,Parasite,Least
+Trichuris spp.,Parasite,Least
+Artyfechinostpmum spp.,Parasite,Least
+Eurytrema pancreaticum,Parasite,Least
+Fasciolopsis buski,Parasite,Least
+Gastrodiscoides spp.,Parasite,Least
+Eimeria spp.,Parasite,Least
+Isospora suis,Parasite,Least
+Trypanosoma evansi,Parasite,Least
+Chrysomia bezziana,Parasite,Least
+Sarcoptes scabiei var. Suis,Parasite,Least
+Ixodid ticks,Parasite,Least
+Rabies virus or Lyssa virus,Virus,High
+Foot and mouth disease virus (FMDV),Virus,Low
+Hepatitis E virus,Virus,Low
+Swine influenza virus,Virus,Low
+Pesti virus suis,Virus,Least
+Porcine reproductive and respiratory syndrome virus,Virus,Least
+Japanese encephalitis virus,Virus,Least
+Nipah virus,Virus,Least
+Porcine circo virus,Virus,Least
+Porcine endogenous retrovirus (PERV),Virus,Least
+Porcine epidemic diarrhoea virus,Virus,Least
+Porcine Parvo virus,Virus,Least
+Swinepox virus,Virus,Least
+Mycoplasma spp.,Mycoplasma,Least
+Trichophyton spp.,Fungi,Least
+Microsporum nanum,Fungi,Least

@@ -7,15 +7,15 @@
 		<div class="row">
 			
 		  	<div class="col-sm-12 col-md-6 col-lg-8 pull-right">
-		  		<h2>OBSERVED SYMPTOMS</h2>
-			  	<p>Please Click and choose appropriate Age group and Symptoms most similar to your diseased animals.</p>
+		  		<h2>ANTE-MORTEM SEARCH</h2>
+			  	<p>Please choose Age group and Symptoms which are similar to your diseased animals.</p>
 		  		<!-- right side panel -->
 		  		<div class="panel panel-primary">
 				  	<div class="panel-heading">Information</div>
 				  	<div id="information" class="panel-body">
 				  	</div>
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<!-- previous button place -->
 		  	</div>
 
 		  	<div class="col-sm-12 col-md-6 col-lg-4 scrollable-col">
@@ -33,7 +33,7 @@
 				        	<div class="list-group">
 				          		{% for item in age %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<label class="item">{{item.1}}<input type="checkbox" class="selectOne" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
 				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
@@ -210,9 +210,9 @@
 				    </div>
 			  	</div>
 			  	<!-- end accodion with selectable list -->
-		  		
+		  		<button type="submit" class="btn btn-success">Submit</button>
 		  	</div>
-
+		  	
 		</div>
 
 	</form>

@@ -1,0 +1,3 @@
+pig_farm_address,farm_phone_no,email_address,animal_no,date_of_sikness,symptoms,score,disease_by_vet,satisfaction,suggestion
+ICAR Barapani,1234567890,barapani.icar@gmail.com,2,2018-09-08,"['Weaner', 'Fever', 'Breathing_difficulty', 'Hurried_breathing', 'Labored_breathing', 'Bloody_diarrhea', 'Lameness', 'Lymph_node_enlargement', 'Discharge_from_nose', 'Nose_bleeding']",9,Anthrax,good,Change Disease diagnosed by DSS in to a selectable list.
+anada,asdas,dadasd,adasd,,,,dasdasd,good,adasd

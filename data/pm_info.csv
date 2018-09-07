@@ -1,8 +1,8 @@
 symptoms,label,description
-Male,Male ,NA
-Female,Female,NA
-Cyst_in_tounge_or_muscle,Cyst in tounge or muscle,NA
-Brain_cyst,Brain cyst,NA
+Male,Male ,Male gender pig.
+Female,Female,Female gender pig.
+Cyst_in_tounge_or_muscle,Cyst in tounge or muscle,Abnormal boils in animal tounge or muscle.
+Brain_cyst,Brain cyst,Abnormal fluid-filled sac in the brain
 Snout_necrosis,Snout necrosis,NA
 Turbinate_atropy  ,Turbinate atropy  ,NA
 Tongue_vesicles,Tongue vesicles,NA

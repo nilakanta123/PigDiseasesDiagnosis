@@ -29,7 +29,7 @@ def mrange(n):
 
 def get_am_symptom_list():
 	res = {}
-	s_list = pd.read_csv("data/am_info.csv")
+	s_list = pd.read_csv("./data/am_info.csv")
 	res['age']=[tuple(x) for x in s_list[0:6].values]
 	res['general']=[tuple(x) for x in s_list[6:18].values]
 	res['skin']=[tuple(x) for x in s_list[18:38].values]
@@ -43,7 +43,7 @@ def get_am_symptom_list():
 
 def get_pm_symptom_list():
 	res = {}
-	s_list = pd.read_csv("data/pm_info.csv")
+	s_list = pd.read_csv("./data/pm_info.csv")
 	res['sex']=[tuple(x) for x in s_list[0:2].values]
 	res['head']=[tuple(x) for x in s_list[2:13].values]
 	res['skin']=[tuple(x) for x in s_list[13:17].values]
@@ -74,7 +74,7 @@ def get_pm_symptom_list():
 	return res
 
 def get_am_input(ll):
-	s_list = pd.read_csv("data/am_info.csv")
+	s_list = pd.read_csv("./data/am_info.csv")
 	res = []
 	for i in s_list['symptoms']:
 		if i in ll:
@@ -86,7 +86,7 @@ def get_am_input(ll):
 
 
 def get_pm_input(ll):
-	s_list = pd.read_csv("data/pm_info.csv")
+	s_list = pd.read_csv("./data/pm_info.csv")
 	res = []
 	for i in s_list['symptoms']:
 		if i in ll:
@@ -95,8 +95,23 @@ def get_pm_input(ll):
 			res.append(0)
 	return res
 
+def saveamfeedback(pig_farm_address="", farm_phone_no="", email_address="", animal_no="", date_of_sikness="", symptoms="", score="", disease_by_vet="", satisfaction="", suggestion=""):
+	df_feedback = pd.read_csv("./data/am_feedback.csv")
+	df_feedback = df_feedback.append({'pig_farm_address': pig_farm_address, 'farm_phone_no':farm_phone_no, 'email_address':email_address,
+		'animal_no':animal_no,'date_of_sikness':date_of_sikness,'symptoms':symptoms,'score':score, 'disease_by_vet':disease_by_vet,
+		'satisfaction':satisfaction, 'suggestion':suggestion}, ignore_index=True)
+	df_feedback.to_csv("./data/am_feedback.csv", index=False)
+
+def savepmfeedback(pig_farm_address="", farm_phone_no="", email_address="", animal_no="", date_of_sikness="", symptoms="", score="", disease_by_vet="", satisfaction="", suggestion=""):
+	df_feedback = pd.read_csv("./data/pm_feedback.csv")
+	df_feedback = df_feedback.append({'pig_farm_address': pig_farm_address, 'farm_phone_no':farm_phone_no, 'email_address':email_address,
+		'animal_no':animal_no,'date_of_sikness':date_of_sikness,'symptoms':symptoms,'score':score, 'disease_by_vet':disease_by_vet,
+		'satisfaction':satisfaction, 'suggestion':suggestion}, ignore_index=True)
+	df_feedback.to_csv("./data/pm_feedback.csv", index=False)
+
+
 def am_diseases_predict_engine(ll):
-	df = pd.read_csv('data/am.csv')
+	df = pd.read_csv('./data/am.csv')
 	# df.drop(['Probable_agent'], axis=1, inplace=True)	
 	labelEncoder = preprocessing.LabelEncoder()
 	if df['Probable_disease'].size > 0:
@@ -118,7 +133,7 @@ def am_diseases_predict_engine(ll):
 	return labelEncoder.inverse_transform(pred[:3]), adjusting(score_list[:3])
 
 def pm_diseases_predict_engine(ll):
-	df = pd.read_csv('data/pm.csv')
+	df = pd.read_csv('./data/pm.csv')
 	df.drop(['Probable_agent','Approve','Partial','Total','Decision'], axis=1, inplace=True)
 	labelEncoder = preprocessing.LabelEncoder()
 	if df['Probable_disease'].size > 0:
@@ -142,7 +157,7 @@ def pm_diseases_predict_engine(ll):
 
 
 def am_decision_predict_engine(ll,st):
-	df = pd.read_csv('data/am.csv')
+	df = pd.read_csv('./data/am.csv')
 	# df.drop(['Probable_agent'], axis=1, inplace=True)	
 	pdle = preprocessing.LabelEncoder()
 	pale = preprocessing.LabelEncoder()
@@ -165,7 +180,7 @@ def am_decision_predict_engine(ll,st):
 	return dle.inverse_transform(pred)
 
 def pm_decision_predict_engine(ll,st):
-	df = pd.read_csv('data/pm.csv')
+	df = pd.read_csv('./data/pm.csv')
 	df.drop(['Probable_agent','Approve','Partial','Total'], axis=1, inplace=True)
 	dcle = preprocessing.LabelEncoder()
 	pdle = preprocessing.LabelEncoder()

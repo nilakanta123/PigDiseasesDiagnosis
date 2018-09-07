@@ -15,7 +15,7 @@
 				  	<div id="information" class="panel-body">
 				  	</div>
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				
 		  	</div>
 
 		  	<div class="col-sm-12 col-md-6 col-lg-4 scrollable-col">
@@ -33,7 +33,7 @@
 				        	<div class="list-group">
 				          		{% for item in sex %}
 				          		<li class="list-group-item">
-				          			<label class="item">{{item.1}}<input type="checkbox" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
+				          			<label class="item">{{item.1}}<input type="checkbox" class="selectOne" name="checks" value={{item.0}} class="chk"><span class="checkmark"></span></label>
 				          			<p class="hidden">{{item.2}}</p>
 				          		</li>
 				          		{% endfor %}
@@ -567,7 +567,7 @@
 
 			  	</div>
 			  	<!-- end accodion with selectable list -->
-		  		
+		  		<button type="submit" class="btn btn-success">Submit</button>
 		  	</div>
 
 		</div>
