@@ -2,25 +2,25 @@ symptoms,label,description
 Male,Male ,Male gender pig.
 Female,Female,Female gender pig.
 Cyst_in_tounge_or_muscle,Cyst in tounge or muscle,Abnormal boils in animal tounge or muscle.
-Brain_cyst,Brain cyst,Abnormal fluid-filled sac in the brain
+Brain_cyst,Brain cyst,Abnormal fluid-filled sac in the brain.
 Snout_necrosis,Snout necrosis,HDUHsjadfa
 Turbinate_atropy  ,Turbinate atropy  ,NA
 Tongue_vesicles,Tongue vesicles,"a small fluid-filled bladder, sac, cyst, or vacuole within the tongue"
 Tonsil _necrosis,Tonsil  necrosis,NA
-Brain_haemorrhages,Brain haemorrhages,NA
-Meningitis,Meningitis,NA
-Encephalitis,Encephalitis,NA
-Hydrocephalus,Hydrocephalus,NA
-Cerebellar_hypoplasia,Cerebellar hypoplasia,NA
-Alopecia,Alopecia,NA
-Diamond_shaped_lesions,Diamond shaped lesions,NA
-Skin_Haemorrhages,Skin Haemorrhages,NA
-Pus_or_abscess_or_pyaemia_in_skin,Pus or abscess or pyaemia in skin,NA
-Muscle_Cyst,Muscle Cyst,NA
-Myositis,Myositis,NA
-Muscle_Necrosis,Muscle Necrosis,NA
+Brain_haemorrhages,Brain haemorrhages,A brain hemorrhage is a type of stroke.
+Meningitis,Meningitis,Meningitis is an inflammation of the meninges. The meninges are the three membranes that cover the brain and spinal cord.
+Encephalitis,Encephalitis,Encephalitis is an acute inflammation of the brain.
+Hydrocephalus,Hydrocephalus,Hydrocephalus is the buildup of fluid in the cavities (ventricles) deep within the brain.
+Cerebellar_hypoplasia,Cerebellar hypoplasia,Cerebellar hypoplasia is a disorder in which the cerebellum is not completely mature at birth.
+Alopecia,Alopecia,alopecia refers to a loss of hair from part of the head or body. 
+Diamond_shaped_lesions,Diamond shaped lesions,The diamond-shaped lesions are characteristic of Erysipelas; the causative agent is Erysipelotrix rhusiopathiae.
+Skin_Haemorrhages,Skin Haemorrhages,Bleeding into the skin.
+Pus_or_abscess_or_pyaemia_in_skin,Pus or abscess or pyaemia in skin,"Skin abscesses are warm, painful, pus-filled pockets of infection below the skin surface that may occur on any body surface."
+Muscle_Cyst,Muscle Cyst,A cyst is a closed sac-like structure that is not a normal part of the tissue where it is located
+Myositis,Myositis,Myositis means inflammation of the muscles that you use to move your body.
+Muscle_Necrosis,Muscle Necrosis,"Abnormal cell death involving muscle fibers usually associated with break in, or absence of, muscle surface fiber membrane and resulting in irreversible damage to muscle fibers."
 Fibrin_deposition_on_pleura,Fibrin deposition on pleura,NA
-Pleura_thickening,Pleura thickening,NA
+Pleura_thickening,Pleura thickening,"Pleura thickening, also known as diffuse pleura thickening (DPT), is a lung disease in which extensive scarring thickens the lining of the lungs (the pleura)."
 Pleural_abscess_or_Purulent_exudate,Pleural abscess or Purulent exudate,NA
 Pleural_adhesions,Pleural adhesions,NA
 Pleural_effusions,Pleural effusions,NA
