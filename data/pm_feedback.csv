@@ -1,2 +1,3 @@
 pig_farm_address,farm_phone_no,email_address,animal_no,date_of_sikness,symptoms,score,disease_by_vet,satisfaction,suggestion
-Rani,8050288954,rani@gmail.com,007,2018-09-01,"['Male', 'Diamond_shaped_lesions', 'Skin_Haemorrhages', 'Myocarditis', 'Heart_Necrosis']",5,Anthrax,fair,list in disease
+Rani,8050288954,rani@gmail.com,7,2018-09-01,"['Male', 'Diamond_shaped_lesions', 'Skin_Haemorrhages', 'Myocarditis', 'Heart_Necrosis']",5,Anthrax,fair,list in disease
+fgdfg,dfgdf,dfgdfg,dfgdfgdf,2018-09-06,,,gggg,very good,gfggggggg

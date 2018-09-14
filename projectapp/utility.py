@@ -133,11 +133,7 @@ def am_diseases_predict_engine(ll):
 	return labelEncoder.inverse_transform(pred[:3]), adjusting(score_list[:3])
 
 def pm_diseases_predict_engine(ll):
-<<<<<<< HEAD
 	df = pd.read_csv('./data/pm.csv')
-=======
-	df = pd.read_csv('data/pm.csv')
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 	df.drop(['Probable_agent','Approve','Partial','Total','Decision'], axis=1, inplace=True)
 	labelEncoder = preprocessing.LabelEncoder()
 	if df['Probable_disease'].size > 0:

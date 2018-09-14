@@ -1,10 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import PageOneForm, PageTwoForm, FeedbackForm
-<<<<<<< HEAD
 from .utility import get_am_symptom_list,  get_pm_symptom_list, get_am_input, get_pm_input, am_diseases_predict_engine, am_decision_predict_engine, pm_diseases_predict_engine, pm_decision_predict_engine, mrange, saveamfeedback, savepmfeedback
-=======
-from .utility import get_am_symptom_list,  get_pm_symptom_list, get_am_input, get_pm_input, am_diseases_predict_engine, am_decision_predict_engine, pm_diseases_predict_engine, pm_decision_predict_engine, mrange
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 
 def page_am(request):
 	if request.method == 'POST':
@@ -25,17 +21,8 @@ def page_am(request):
 				request.session['disease3'] =diseases[2]
 				request.session['score3'] = int(scores[2])
 				request.session['range3'] = mrange(int(scores[2]))
-<<<<<<< HEAD
 				request.session['symptomlist'] = checked_list
 				return redirect('page_am_result')
-=======
-				return redirect('page_am_result')
-				# return render(request, 'page_antimortem_result.html',{'finding': diseases,
-				# 	'score1': int(scores[0]), 'range1': mrange(int(scores[0])),
-				# 	'score2': int(scores[1]), 'range2': mrange(int(scores[1])),
-				# 	'score3': int(scores[2]), 'range3': mrange(int(scores[2])),
-				# 	'decision': decision})
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 	else:
 		form = PageOneForm()
 	dic = get_am_symptom_list()
@@ -67,11 +54,7 @@ def page_pm(request):
 				request.session['disease3'] =diseases[2]
 				request.session['score3'] = int(scores[2])
 				request.session['range3'] = mrange(int(scores[2]))
-<<<<<<< HEAD
 				request.session['symptomlist'] = checked_list
-=======
-				# return render(request, 'page_postmortem_result.html',{'finding':diseases, 'decision': decision})
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 				return redirect('page_pm_result')
 	 # if a GET (or any other method) we'll create a blank form
 	else:
@@ -94,20 +77,16 @@ def page_am_result(request):
 		form = FeedbackForm(request.POST)
 		 # check whether it's valid:
 		if form.is_valid():
-<<<<<<< HEAD
 			saveamfeedback(pig_farm_address=request.POST.get('address'),
 				farm_phone_no=request.POST.get('phone'),
 				email_address=request.POST.get('email'),
 				animal_no=request.POST.get('animal_no'),
 				date_of_sikness=request.POST.get('date'),
-				symptoms=request.session.get('symptomlist'),
-				score=request.session.get('score1'),
+				symptoms=request.POST.get('symptoms'),
+				score=request.POST.get('score'),
 				disease_by_vet=request.POST.get('disease_by_vet'),
 				satisfaction=request.POST.get('satisfaction'),
-				suggestion=request.POST.get('comment'),)
-=======
-			print("\n NOW WRITE CODE FOR SAVING FEEDBACK \n")
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
+				suggestion=request.POST.get('comment'))
 			return redirect('page_am')
 	else:
 		form = FeedbackForm()
@@ -122,12 +101,8 @@ def page_am_result(request):
 		'score3':request.session.get('score3'),
 		'range1':request.session.get('range1'),
 		'range2':request.session.get('range2'),
-<<<<<<< HEAD
 		'range3':request.session.get('range3'),
 		'symptomlist':request.session.get('symptomlist'),})
-=======
-		'range3':request.session.get('range3'),})
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 
 def page_pm_result(request):
 	if request.method == 'POST':
@@ -135,7 +110,6 @@ def page_pm_result(request):
 		form = FeedbackForm(request.POST)
 		 # check whether it's valid:
 		if form.is_valid():
-<<<<<<< HEAD
 			savepmfeedback(pig_farm_address=request.POST.get('address'),
 				farm_phone_no=request.POST.get('phone'),
 				email_address=request.POST.get('email'),
@@ -146,9 +120,6 @@ def page_pm_result(request):
 				disease_by_vet=request.POST.get('disease_by_vet'),
 				satisfaction=request.POST.get('satisfaction'),
 				suggestion=request.POST.get('comment'))
-=======
-			print("\n NOW WRITE CODE FOR SAVING FEEDBACK \n")
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 			return redirect('page_pm')
 	else:
 		form = FeedbackForm()
@@ -163,10 +134,6 @@ def page_pm_result(request):
 		'score3':request.session.get('score3'),
 		'range1':request.session.get('range1'),
 		'range2':request.session.get('range2'),
-<<<<<<< HEAD
 		'range3':request.session.get('range3'),
 		'symptomlist':request.session.get('symptomlist'),})
-=======
-		'range3':request.session.get('range3'),})
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 

@@ -129,13 +129,6 @@
 	}
 
 	.checked{
-<<<<<<< HEAD
-    	color: orange;
-	}
-	.radio{
-		color: orange;
-	}
-=======
     	color: #ffa500;
 	}
 	
@@ -166,7 +159,6 @@
         visibility: visible;
         border: 2px solid white;
     }
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
 
 
 </style>
@@ -184,6 +176,15 @@
 		/* Get the checkboxes values based on the class attached to each check box */
 		$("#buttonClass").click(function() {
 		    getValueUsingClass();
+		});
+
+		$('.selectOne').on('change', function() {
+		   $('.selectOne').not(this).prop('checked', false);
+		   // $('#result').html($(this).data( "id" ));
+		   // if($(this).is(":checked"))
+		   // 	$('#result').html($(this).data( "id" ));
+		   // else
+		   // 	$('#result').html('Empty...!');
 		});
 
 	});
@@ -219,7 +220,6 @@
 		    <li><a href="{% url 'page_am' %}">Antimortem</a></li>
 		    <li><a href="{% url 'page_pm' %}">Postmortem</a></li>
 		  </ul>
-		  <p class="navbar-text">Some text</p>
 		</nav>
 
 		{% block content %}

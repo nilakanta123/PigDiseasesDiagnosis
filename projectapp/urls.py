@@ -8,8 +8,4 @@ urlpatterns = [
     path('antimortem/result/', page_am_result, name='page_am_result'),
     path('postmortem/result/', page_pm_result, name='page_pm_result'),
 
-<<<<<<< HEAD
 ]
-=======
-]
->>>>>>> 1a5e23280bfdba7447c0c53d28fb93b9614f950d
