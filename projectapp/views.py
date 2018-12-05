@@ -23,6 +23,11 @@ def page_am(request):
 				request.session['range3'] = mrange(int(scores[2]))
 				request.session['symptomlist'] = checked_list
 				return redirect('page_am_result')
+				# return render(request, 'page_antimortem_result.html',{'finding': diseases,
+				# 	'score1': int(scores[0]), 'range1': mrange(int(scores[0])),
+				# 	'score2': int(scores[1]), 'range2': mrange(int(scores[1])),
+				# 	'score3': int(scores[2]), 'range3': mrange(int(scores[2])),
+				# 	'decision': decision})
 	else:
 		form = PageOneForm()
 	dic = get_am_symptom_list()
@@ -55,6 +60,7 @@ def page_pm(request):
 				request.session['score3'] = int(scores[2])
 				request.session['range3'] = mrange(int(scores[2]))
 				request.session['symptomlist'] = checked_list
+				# return render(request, 'page_postmortem_result.html',{'finding':diseases, 'decision': decision})
 				return redirect('page_pm_result')
 	 # if a GET (or any other method) we'll create a blank form
 	else:
@@ -82,11 +88,12 @@ def page_am_result(request):
 				email_address=request.POST.get('email'),
 				animal_no=request.POST.get('animal_no'),
 				date_of_sikness=request.POST.get('date'),
-				symptoms=request.POST.get('symptoms'),
-				score=request.POST.get('score'),
+				symptoms=request.session.get('symptomlist'),
+				score=request.session.get('score1'),
 				disease_by_vet=request.POST.get('disease_by_vet'),
 				satisfaction=request.POST.get('satisfaction'),
-				suggestion=request.POST.get('comment'))
+				suggestion=request.POST.get('comment'),)
+			print("\n NOW WRITE CODE FOR SAVING FEEDBACK \n")
 			return redirect('page_am')
 	else:
 		form = FeedbackForm()
@@ -120,6 +127,7 @@ def page_pm_result(request):
 				disease_by_vet=request.POST.get('disease_by_vet'),
 				satisfaction=request.POST.get('satisfaction'),
 				suggestion=request.POST.get('comment'))
+			print("\n NOW WRITE CODE FOR SAVING FEEDBACK \n")
 			return redirect('page_pm')
 	else:
 		form = FeedbackForm()

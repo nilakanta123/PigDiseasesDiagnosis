@@ -176,8 +176,8 @@ def am_decision_predict_engine(ll,st):
 	model2_svm.fit(X,y)
 	ss = pdle.transform([st])
 	ll.extend(ss)
-	pred = model2_svm.predict([ll])[0]
-	return dle.inverse_transform(pred)
+	pred = model2_svm.predict([ll])
+	return dle.inverse_transform(pred)[0]
 
 def pm_decision_predict_engine(ll,st):
 	df = pd.read_csv('./data/pm.csv')
@@ -195,6 +195,6 @@ def pm_decision_predict_engine(ll,st):
 	model_svm_for_pm.fit(X,y)
 	ss = pdle.transform([st])
 	ll.extend(ss)
-	pred = model_svm_for_pm.predict([ll])[0]
-	return dcle.inverse_transform(pred)
+	pred = model_svm_for_pm.predict([ll])
+	return dcle.inverse_transform(pred)[0]
 
